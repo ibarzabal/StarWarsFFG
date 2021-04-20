@@ -24,4 +24,5 @@ function onInit()
 	for kRecordType,vRecordType in pairs(aRecordOverrides) do
 		LibraryData.overrideRecordTypeInfo(kRecordType, vRecordType);
 	end
+	LibraryData.setRecordTypeInfo("setting", nil);
 end

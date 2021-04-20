@@ -54,6 +54,10 @@
 	<string name ="defense_starboard_disabled_tooltip">Starboard Defense Enable/Disable</string>
 	<string name ="defense_aft_disabled_tooltip">Aft Defense Enable/Disable</string>
 
-
+	<!-- instead of setting, we use the field to represent from which book the record came from, as Source -->
+<!--	<string name="talent_label_setting">Source</string>
+	<string name="record_label_setting">Source</string>
+	<string name="item_grouped_label_setting">Source</string>
+-->
 
 </root>
