@@ -41,6 +41,52 @@ function onLinkChanged()
 end
 
 
+function updateControl(sControl, bReadOnly, bID)
+	if not self[sControl] then
+		return false;
+	end
+
+	if not bID then
+		return self[sControl].update(bReadOnly, true);
+	end
+
+	return self[sControl].update(bReadOnly);
+end
+
+
+--function updateControl(sControl, bReadOnly, bID)
+--	if not self[sControl] then
+--		return false;
+--	end
+--end
+
+function updateControl(sControl, bReadOnly, bID)
+	Debug.chat(sControl);
+	if not self[sControl] then
+		return false;
+	end
+
+	if not bID then
+		return self[sControl].update(bReadOnly, true);
+	end
+
+	local sLabel = self[sControl].getName() .. "_label";
+	if bReadOnly and self[sControl].isEmpty() then
+		self[sLabel].setVisible(false);
+		if sControl == "control_skill" then
+			self["control_skill_dice"].setVisible(false);
+		end
+	else
+		self[sLabel].setVisible(true);
+		if sControl == "control_skill" then
+			self["control_skill_dice"].setVisible(true);
+		end
+	end
+
+	return self[sControl].update(bReadOnly);
+end
+
+
 function linkPCFields(nodeVehicle)
 --	local nodeRecord = getDatabaseNode();
 	local bReadOnly = true; -- WindowManager.getReadOnlyState(nodeRecord);
@@ -82,11 +128,36 @@ function linkPCFields(nodeVehicle)
 
 	control_skill.setLink(nodeVehicle.createChild("control_skill","string"));
 	compliment.setLink(nodeVehicle.createChild("compliment","string"));
+	starfighter_complement.setLink(nodeVehicle.createChild("starfighter_complement","string"));
+	vehicle_complement.setLink(nodeVehicle.createChild("vehicle_complement","string"));
 	passenger_capacity.setLink(nodeVehicle.createChild("passenger_capacity","string"));
 	encumbrance_capacity.setLink(nodeVehicle.createChild("encumbrance_capacity","number"));
 	consumables.setLink(nodeVehicle.createChild("consumables","string"));
 	hard_points.setLink(nodeVehicle.createChild("hard_points","number"));
+	additional_rules.setLink(nodeVehicle.createChild("additional_rules","string"));
 	notes.setLink(nodeVehicle.createChild("notes","string"));
+
+
+
+--	updateControl("owner", bReadOnly, bID);
+--	updateControl("name", bReadOnly, bID);
+--	updateControl("type", bReadOnly, bID);
+--	updateControl("manufacturer", bReadOnly, bID);
+--	updateControl("maximum_altitude", bReadOnly, bID);
+--	updateControl("hyperdrive", bReadOnly, bID);
+--	updateControl("navicomputer", bReadOnly, bID);
+--	updateControl("sensor_range", bReadOnly, bID);
+--	updateControl("control_skill", bReadOnly, bID);
+--	updateControl("compliment", bReadOnly, bID);
+--	updateControl("starfighter_complement", bReadOnly, bID);
+--	updateControl("vehicle_complement", bReadOnly, bID);
+--	updateControl("passenger_capacity", bReadOnly, bID);
+--	updateControl("encumbrance_capacity", bReadOnly, bID);
+--	updateControl("consumables", bReadOnly, bID);
+--	updateControl("hard_points", bReadOnly, bID);
+--	updateControl("additional_rules", bReadOnly, bID);
+--	updateControl("notes", bReadOnly, bID);
+
 
 	if getDatabaseNode() then
 		local temp_node = getDatabaseNode().createChild("temp_vehicle");

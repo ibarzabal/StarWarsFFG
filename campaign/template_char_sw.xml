@@ -6,15 +6,10 @@
 -->
 
 <root>
-
 	<template name="button_defense">
 		<buttonfield>
 			<state icon="button_career_on" />
 			<state icon="button_career_off" />
 		</buttonfield>
 	</template>
-
-
-
-
 </root>
