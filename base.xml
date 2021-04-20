@@ -28,6 +28,7 @@
 	<!-- Graphics -->
 	<includefile source="graphics/graphics_dice_sw.xml" />
 	<includefile source="graphics/graphics_icons_sw.xml" />
+	<includefile source="graphics/graphics_fonts_sw.xml" />
 	<!-- Add Force Die to diebox -->
 	<includefile source="definitions/desktop_sw.xml" />
 
