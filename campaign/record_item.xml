@@ -67,13 +67,7 @@
 				<static textres="item_label_type" />
 			</label_column>
 			<string_columnh name="type">
-				<nohide />
 				<delaykeyupdate />
-				<script>
-					function onValueChanged()
-						window.update();
-					end
-				</script>
 			</string_columnh>
 
 			<label_column name="subtype_label">
@@ -137,15 +131,28 @@
 
 			<line_column name="divider2" />
 
+			<label_column name="cost_label">
+				<static textres="item_label_cost" />
+			</label_column>
+			<string_columnh name="cost">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+				<no_symbol_convertion />
+			</string_columnh>
+
 			<label_column name="encumbrance_label">
 				<static textres="item_label_encumbrance" />
 			</label_column>
 			<string_columnh name="encumbrance" />
 
-			<label_column name="cost_label">
-				<static textres="item_label_cost" />
+			<label_column name="hard_points_label">
+				<static textres="item_label_hard_points" />
 			</label_column>
-			<string_columnh name="cost" />
+			<number_columnh name="hard_points">
+				<delaykeyupdate />
+			</number_columnh>
 
 
 			<label_column name="rarity_label">
@@ -170,13 +177,6 @@
 			<string_columnh name="special" />
 
 			<!-- Attachments -->
-			<label_column name="hard_points_label">
-				<static textres="item_label_hard_points" />
-			</label_column>
-			<number_columnh name="hard_points">
-				<delaykeyupdate />
-			</number_columnh>
-
 			<header_column name="attachments_header">
 				<static textres="item_header_attachments"/>
 				<center />

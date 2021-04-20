@@ -17,9 +17,6 @@ aRecordOverrides = {
 
 
 
-
-
-
 function onInit()
 	for kRecordType,vRecordType in pairs(aRecordOverrides) do
 		LibraryData.overrideRecordTypeInfo(kRecordType, vRecordType);
