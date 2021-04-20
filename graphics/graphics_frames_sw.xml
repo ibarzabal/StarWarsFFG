@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+
+<framedef name="statblock_vehicle">
+	<bitmap file="graphics/frames/stat_block_vehicle_sw1.png" />
+	<middle>0,0,479,182</middle>
+</framedef>
+
+</root>

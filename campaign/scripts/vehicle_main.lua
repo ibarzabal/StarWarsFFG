@@ -46,12 +46,17 @@ function update()
   main_statblock1_silhouette.setReadOnly(bReadOnly);
 	main_statblock1_speed.setReadOnly(bReadOnly);
 	main_statblock1_handling.setReadOnly(bReadOnly);
-	vehicle_defense.setReadOnly(bReadOnly);
 	vehicle_armor.setReadOnly(bReadOnly);
 	hull_trauma_threshold.setReadOnly(bReadOnly);
 	hull_trauma_current.setReadOnly(bReadOnly);
 	system_strain_threshold.setReadOnly(bReadOnly);
 	system_strain_current.setReadOnly(bReadOnly);
+	vehicle_defense_fore.setReadOnly(bReadOnly);
+	vehicle_defense_port.setReadOnly(bReadOnly);
+	vehicle_defense_starboard.setReadOnly(bReadOnly);
+	vehicle_defense_aft.setReadOnly(bReadOnly);	
+
+
 
 	if bReadOnly then
 		attachments_iedit.setVisible(false);

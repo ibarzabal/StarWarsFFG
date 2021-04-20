@@ -29,6 +29,10 @@
 	<includefile source="graphics/graphics_dice_sw.xml" />
 	<includefile source="graphics/graphics_icons_sw.xml" />
 	<includefile source="graphics/graphics_fonts_sw.xml" />
+	<includefile source="graphics/graphics_frames_sw.xml" />
+
+
+
 	<!-- Add Force Die to diebox -->
 	<includefile source="definitions/desktop_sw.xml" />
 
@@ -46,7 +50,8 @@
 	<!-- Campaign Records -->
 	<includefile source="campaign/record_npc_main.xml" />
 	<includefile source="campaign/record_talent.xml" />
+	<includefile source="campaign/record_vehicle.xml" />
 	<includefile source="campaign/record_item_attachment.xml" />
-
+	<includefile source="campaign/record_char_vehicle.xml" />
 
 </root>
