@@ -205,7 +205,7 @@ skilldata = {
 		description = "<p>Weapon Skill from Force and Destiny(tm).</p>",
 	},
 	-- AGE OF REBELLION
-	["Warfare"] = {
+	["Knowledge (Warfare)"] = {
 		characteristic = "IN",
 		description = "<p>Knowledge skill from Age of Rebellion(tm).</p>",
 	}
