@@ -83,7 +83,8 @@ function update()
 	if updateControl("soak", bReadOnly, bID and bArmor) then bSection4 = true; end
 
 	updateControl("description", bReadOnly, bID);
-	updateControl("setting", bReadOnly, bID);
+	updateControl("source", bReadOnly, bID);
+	updateControl("source_page", bReadOnly, bID);
 	updateControl("attachments", bReadOnly, bID);
 
 
@@ -97,17 +98,12 @@ function update()
 	divider4.setVisible((bSection1 or bSection2 or bSection3 or bSection4));
 	-- Make hard points only visible for weapons and armor
 
-	compatible_silhouettes_label.setVisible(false);
-	compatible_silhouettes.setVisible(false);
 	if (bWeapon or bArmor) or (bGear and OptionsManager.isOption("GATT", "on")) then
-		hard_points_label.setVisible(true);
-		hard_points.setVisible(true);
-		attachments_header.setVisible(true);
-		attachments_iedit.setVisible(true);
-		attachments.setVisible(true);
-		if bWeapon and bVehicleWeapon then
-			compatible_silhouettes_label.setVisible(true);
-			compatible_silhouettes.setVisible(true);
+		if updateControl("hard_points", bReadOnly, bID) then bSection3 = true; end
+		updateControl("attachments", bReadOnly, bID);
+		if (bVehicleWeapon == false) then
+			compatible_silhouettes_label.setVisible(false);
+			compatible_silhouettes.setVisible(false);
 		end
 	else
 		hard_points_label.setVisible(false);
@@ -116,6 +112,7 @@ function update()
 		attachments_iedit.setVisible(false);
 		attachments.setVisible(false);
 	end
+
 	if bReadOnly then
 		attachments_iedit.setVisible(false);
 	end

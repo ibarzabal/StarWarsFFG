@@ -10,7 +10,7 @@ aRecordOverrides = {
 		aCustomFilters = {
 			["Activation"] = { sField = "activation" },
 			["Ranked"] = { sField = "ranked" },
-			["Setting"] = { sField = "setting" }
+			["Source"] = { sField = "source" }
 		},
 	},
 };

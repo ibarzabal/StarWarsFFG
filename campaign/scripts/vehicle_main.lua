@@ -51,7 +51,8 @@ function update()
 	updateControl("hard_points", bReadOnly, bID);
 	updateControl("notes", bReadOnly, bID);
 	updateControl("additional_rules", bReadOnly, bID);
-	updateControl("setting", bReadOnly, bID);
+	updateControl("source", bReadOnly, bID);
+	updateControl("source_page", bReadOnly, bID);
   main_statblock1_silhouette.setReadOnly(bReadOnly);
 	main_statblock1_speed.setReadOnly(bReadOnly);
 	main_statblock1_handling.setReadOnly(bReadOnly);
@@ -67,16 +68,21 @@ function update()
 
 	if bReadOnly then
 		attachments_iedit.setVisible(false);
+		attachments_iadd.setVisible(false);
 		weapons_iedit.setVisible(false);
+		weapons_iadd.setVisible(false);
 		defense_fore_disabled.setVisible(false);
 		defense_port_disabled.setVisible(false);
 		defense_starboard_disabled.setVisible(false);
 		defense_aft_disabled.setVisible(false);
 		if critical_damage_iedit then
 			critical_damage_iedit.setVisible(false);
+			critical_damage_iadd.setVisible(false);
 		end
 	else
 		attachments_iedit.setVisible(true);
+		attachments_iadd.setVisible(true);
+		weapons_iadd.setVisible(true);
 		weapons_iedit.setVisible(true);
 		defense_fore_disabled.setVisible(true);
 		defense_port_disabled.setVisible(true);
@@ -84,6 +90,7 @@ function update()
 		defense_aft_disabled.setVisible(true);
 		if critical_damage_iedit then
 			critical_damage_iedit.setVisible(true);
+			critical_damage_iadd.setVisible(true);
 		end
 	end
 
