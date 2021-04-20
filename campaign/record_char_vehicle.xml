@@ -386,6 +386,17 @@
 				<readonly />
 			</string_columnh_linked>
 
+			<label_column name="vehicle_complement_label">
+				<static textres="vehicle_label_vehicle_complement" />
+			</label_column>
+			<string_columnh_linked name="vehicle_complement" source=".temp_vehicle.vehicle_complement">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+				<nolinkwidget />
+				<readonly />
+			</string_columnh_linked>
 
 
 			<label_column name="encumbrance_capacity_label">
@@ -435,7 +446,7 @@
 				<static textres="vehicle_label_control_skill" />
 			</label_column>
 
-			<skilldicepool>
+			<skilldicepool name="control_skill_dice">
 				<script file="common/scripts/vehicle_control_skilldicepool.lua" />
 				<anchored to="control_skill_label" width="20" height="20">
 					<top />
@@ -507,14 +518,14 @@
 			<label_column name="additional_rules_label">
 				<static textres="vehicle_label_additional_rules" />
 			</label_column>
-			<string_columnh_linked name="additional_rules" source = ".temp_vehicle.additional_rules">
+			<ft_columnh_linked name="additional_rules" source = ".temp_vehicle.additional_rules" >
 				<anchored>
 					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
 					<left offset="135" />
 				</anchored>
 				<readonly />
 				<nolinkwidget />
-			</string_columnh_linked>
+			</ft_columnh_linked>
 
 
 			<ft_columnh_linked name="notes" source = ".temp_vehicle.notes" >

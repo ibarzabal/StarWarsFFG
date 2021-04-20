@@ -41,6 +41,7 @@ function update()
 	updateControl("control_skill", bReadOnly, bID);
 	updateControl("compliment", bReadOnly, bID);
 	updateControl("starfighter_complement", bReadOnly, bID);
+	updateControl("vehicle_complement", bReadOnly, bID);
 	updateControl("passenger_capacity", bReadOnly, bID);
 	updateControl("cost", bReadOnly, bID);
 	updateControl("rarity", bReadOnly, bID);
