@@ -38,6 +38,9 @@
 	<!-- Vehicles -->
 	<string name="vehicle_label_type">Vehicle Type/Model</string>
 	<string name="vehicle_label_compliment">Crew/Ship's Comp.</string>
+	<string name="vehicle_label_starfighter_complement">Starfighter Comp.</string>
+	<string name="vehicle_label_additional_rules">Additional Rules</string>
+
 				<!-- These are new fields in SW vehicles: -->
 	<string name="vehicle_label_manufacturer">Manufacturer</string>
 	<string name="vehicle_label_maximum_altitude">Maximum Altitude</string>

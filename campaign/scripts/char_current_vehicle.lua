@@ -41,6 +41,44 @@ function onLinkChanged()
 end
 
 
+--function updateControl(sControl, bReadOnly, bID)
+--	if not self[sControl] then
+--		return false;
+--	end
+--end
+
+function updateControl(sControl, bReadOnly, bForceHide)
+	local bLocalShow;
+	if bForceHide then
+		bLocalShow = false;
+	else
+		bLocalShow = true;
+		if bReadOnly and not nohide and isEmpty() then
+			bLocalShow = false;
+		end
+	end
+
+	--sControl.setReadOnly(bReadOnly);
+	sControl.setVisible(bLocalShow);
+
+	local sLabel = sControl.getName() .. "_label";
+	if window[sLabel] then
+		window[sLabel].setVisible(bLocalShow);
+	end
+--	if separator then
+--		if window[separator[1]] then
+--			window[separator[1]].setVisible(bLocalShow);
+--		end
+--	end
+
+	--if self.onVisUpdate then
+	--	self.onVisUpdate(bLocalShow, bReadOnly);
+	--end
+
+	return bLocalShow;
+end
+
+
 function linkPCFields(nodeVehicle)
 --	local nodeRecord = getDatabaseNode();
 	local bReadOnly = true; -- WindowManager.getReadOnlyState(nodeRecord);
@@ -82,11 +120,16 @@ function linkPCFields(nodeVehicle)
 
 	control_skill.setLink(nodeVehicle.createChild("control_skill","string"));
 	compliment.setLink(nodeVehicle.createChild("compliment","string"));
+	starfighter_complement.setLink(nodeVehicle.createChild("starfighter_complement","string"));
 	passenger_capacity.setLink(nodeVehicle.createChild("passenger_capacity","string"));
 	encumbrance_capacity.setLink(nodeVehicle.createChild("encumbrance_capacity","number"));
 	consumables.setLink(nodeVehicle.createChild("consumables","string"));
 	hard_points.setLink(nodeVehicle.createChild("hard_points","number"));
+	additional_rules.setLink(nodeVehicle.createChild("additional_rules","string"));
 	notes.setLink(nodeVehicle.createChild("notes","string"));
+
+	-- need to fix this so i can hide empty fields:
+	--updateControl(control_skill, bReadOnly, bID);
 
 	if getDatabaseNode() then
 		local temp_node = getDatabaseNode().createChild("temp_vehicle");
