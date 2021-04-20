@@ -6,11 +6,17 @@
 -->
 
 <root>
-
+<!-- RESKIN -->
 <framedef name="statblock_vehicle">
 	<bitmap file="graphics/frames/stat_block_vehicle_sw.png" />
 	<middle>0,0,479,182</middle>
 </framedef>
 
+
+<!-- Characters -->
+<framedef name="statblock1">
+	<bitmap file="graphics/frames/statblock1.png" />
+	<middle>0,0,480,77</middle>
+</framedef>
 
 </root>

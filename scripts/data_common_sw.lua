@@ -11,55 +11,8 @@
 -- 	return false;
 -- end
 
-
--- Characteristics (database names)
-characteristics = {
-	"brawn",
-	"agility",
-	"intellect",
-	"cunning",
-	"willpower",
-	"presence"
-};
-
-characteristics_ltos = {
-	["brawn"] = "BR",
-	["agility"] = "AG",
-	["intellect"] = "IN",
-	["cunning"] = "CU",
-	["willpower"] = "WI",
-	["presence"] = "PR"
-};
-
-characteristics_stol = {
-	["BR"] = "brawn",
-	["AG"] = "agility",
-	["IN"] = "intellect",
-	["CU"] = "cunning",
-	["WI"] = "willpower",
-	["PR"] = "presence"
-};
-
-	-- This is used by the ruleset to choose which skills to filter and show in the character sheet
-	genesys_settings = {
-			["Terrinoth"] = {
-					shortname = "TERRINOTH" ,
-					description = "<p>Terrinoth is a Fantasy Setting.</p>"
-				},
-			["Android - Shadow of the Beanstalk"] = {
-					shortname = "ANDROID",
-					description = "<p>Android is a Cyberpunk Setting.</p>"
-				},
-			["Generic Setting"] = {
-				shortname = "GENERIC",
-				description = "<p>This is a generic setting...</p>"
-			}
-	};
-
-
-
-
-skilldata = {
+-- This is the default Skill data (if no database for Setting+skills exist)
+skilldata_default = {
 -- GENERAL SKILLS
 ["Astrogation"] = {
 		characteristic = "IN",
@@ -211,7 +164,7 @@ skilldata = {
 };
 
 
-critical_injury_result_data = {
+critical_injury_result_data_default = {
 	["Minor Nick"] = {
 			d100_start = 1,
 			d100_end = 5,
@@ -418,7 +371,7 @@ critical_injury_result_data = {
 };
 
 
-	critical_vehicle_result_data = {
+	critical_vehicle_result_data_default = {
 		["Mechanical Stress"] = {
 				d100_start = 1,
 				d100_end = 9,

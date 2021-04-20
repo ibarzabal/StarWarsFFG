@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+	<windowclass name="species_main" merge="join">
+		<sheetdata>
+			<!-- Charactetistc Block -->
+			<frame_statblock1 name="main_statblock1">
+				<bounds>0,10,480,71</bounds>
+			</frame_statblock1>
+			<!-- BRAWN -->
+			<sheetstartingcharacteristic name="main_statblock1_brawn" source="brawn">
+				<anchored to="main_statblock1" offset="20,17"/>
+			</sheetstartingcharacteristic>
+			<title_statblock>
+				<anchored height="20">
+					<top parent="main_statblock1_brawn" anchor="bottom" offset="6"/>
+					<left parent="main_statblock1_brawn" anchor="left" offset="-20"/>
+					<right parent="main_statblock1_brawn" anchor="right" offset="20"/>
+				</anchored>
+				<center />
+				<static>Brawn</static>
+			</title_statblock>
+			<!-- AGILITY-->
+			<sheetstartingcharacteristic name="main_statblock1_agility" source="agility">
+				<anchored>
+					<to>main_statblock1</to>
+					<offset>102,17</offset>
+				</anchored>
+			</sheetstartingcharacteristic>
+			<title_statblock>
+				<anchored>
+					<top parent="main_statblock1_agility" anchor="bottom" offset="6"/>
+					<left parent="main_statblock1_agility" anchor="left" offset="-20"/>
+					<right parent="main_statblock1_agility" anchor="right" offset="20"/>
+					<size height="20" />
+				</anchored>
+				<center />
+				<static>Agility</static>
+			</title_statblock>
+			<!-- INTELLECT-->
+			<sheetstartingcharacteristic name="main_statblock1_intellect" source="intellect">
+				<anchored to="main_statblock1" offset="185,17" />
+			</sheetstartingcharacteristic>
+			<title_statblock>
+				<anchored>
+					<top parent="main_statblock1_intellect" anchor="bottom" offset="6" />
+					<left parent="main_statblock1_intellect" anchor="left" offset="-20" />
+					<right parent="main_statblock1_intellect" anchor="right" offset="20" />
+					<size height="20" />
+				</anchored>
+				<center />
+				<static>Intellect</static>
+			</title_statblock>
+			<!-- CUNNING-->
+			<sheetstartingcharacteristic name="main_statblock1_cunning" source="cunning">
+				<anchored to="main_statblock1" offset="264,17" />
+			</sheetstartingcharacteristic>
+			<title_statblock>
+				<anchored>
+					<top parent="main_statblock1_cunning" anchor="bottom" offset="6" />
+					<left parent="main_statblock1_cunning" anchor="left" offset="-20" />
+					<right parent="main_statblock1_cunning" anchor="right" offset="20" />
+					<size height="20" />
+				</anchored>
+				<center />
+				<static>Cunning</static>
+			</title_statblock>
+			<!-- WILLPOWER-->
+			<sheetstartingcharacteristic name="main_statblock1_willpower" source="willpower">
+				<anchored to="main_statblock1" offset="345,17" />
+			</sheetstartingcharacteristic>
+			<title_statblock>
+				<anchored>
+					<top parent="main_statblock1_willpower" anchor="bottom" offset="6" />
+					<left parent="main_statblock1_willpower" anchor="left" offset="-20" />
+					<right parent="main_statblock1_willpower" anchor="right" offset="20" />
+					<size height="20" />
+				</anchored>
+				<center />
+				<static>Willpower</static>
+			</title_statblock>
+			<!-- PRESENCE-->
+			<sheetstartingcharacteristic name="main_statblock1_presence" source="presence">
+				<anchored to="main_statblock1" offset="427,17" />
+			</sheetstartingcharacteristic>
+			<title_statblock>
+				<anchored>
+					<top parent="main_statblock1_presence" anchor="bottom" offset="6" />
+					<left parent="main_statblock1_presence" anchor="left" offset="-20" />
+					<right parent="main_statblock1_presence" anchor="right" offset="20" />
+					<size height="20" />
+				</anchored>
+				<center />
+				<static>Presence</static>
+			</title_statblock>
+			<!-- Charactetistc Block END-->
+		</sheetdata>
+	</windowclass>
+</root>

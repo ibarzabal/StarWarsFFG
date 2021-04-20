@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+  	<windowclass name="ct_entry" merge="join">
+  		<margins control="0,0,0,5" />
+  		<frame>ctentrybox</frame>
+  		<sizelimits>
+  			<minimum height="50" />
+  		</sizelimits>
+  		<script file="ct/scripts/ct_entry.lua" />
+  		<sheetdata>
+    		<!-- Genesys Vehicle Defense -->
+    		<number_ct_vehicle name="v_defense" merge="delete" />
+
+    		<!-- Star Wars Vehicle Defense -->
+    		<number_ct_vehicle name="v_defense_fore" source="temp_vehicle.defense.fore">
+          <tooltip textres="ct_vehicle_defense_fore_tip" />
+    			<anchored to="v_defense_label" position="righthigh" offset="20,0" />
+    			<target>temp_vehicle.defense.fore</target>
+    			<readonly />
+    		</number_ct_vehicle>
+    		<number_ct_vehicle name="v_defense_port" source="temp_vehicle.defense.port">
+          <tooltip textres="ct_vehicle_defense_port_tip" />
+    			<anchored to="v_defense_fore" position="righthigh" offset="10,0" />
+    			<target>temp_vehicle.defense.port</target>
+    			<readonly />
+    		</number_ct_vehicle>
+    		<number_ct_vehicle name="v_defense_starboard" source="temp_vehicle.defense.starboard">
+          <tooltip textres="ct_vehicle_defense_starboard_tip" />
+    			<anchored to="v_defense_port" position="righthigh" offset="10,0" />
+    			<target>temp_vehicle.defense.starboard</target>
+    			<readonly />
+    		</number_ct_vehicle>
+    		<number_ct_vehicle name="v_defense_aft" source="temp_vehicle.defense.aft">
+          <tooltip textres="ct_vehicle_defense_aft_tip" />
+    			<anchored to="v_defense_starboard" position="righthigh" offset="10,0" />
+    			<target>temp_vehicle.defense.aft</target>
+    			<readonly />
+    		</number_ct_vehicle>
+    		</sheetdata>
+  	</windowclass>
+</root>
