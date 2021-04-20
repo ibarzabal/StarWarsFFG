@@ -40,8 +40,6 @@ function update()
 	updateControl("sensor_range", bReadOnly, bID);
 	updateControl("control_skill", bReadOnly, bID);
 	updateControl("compliment", bReadOnly, bID);
-	updateControl("starfighter_complement", bReadOnly, bID);
-	updateControl("vehicle_complement", bReadOnly, bID);
 	updateControl("passenger_capacity", bReadOnly, bID);
 	updateControl("cost", bReadOnly, bID);
 	updateControl("rarity", bReadOnly, bID);
@@ -50,7 +48,6 @@ function update()
 	updateControl("consumables", bReadOnly, bID);
 	updateControl("hard_points", bReadOnly, bID);
 	updateControl("notes", bReadOnly, bID);
-	updateControl("additional_rules", bReadOnly, bID);
 	updateControl("setting", bReadOnly, bID);
   main_statblock1_silhouette.setReadOnly(bReadOnly);
 	main_statblock1_speed.setReadOnly(bReadOnly);

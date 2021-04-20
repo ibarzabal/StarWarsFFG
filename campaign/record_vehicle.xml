@@ -335,27 +335,6 @@
 				</anchored>
 			</string_columnh>
 
-			<label_column name="starfighter_complement_label">
-				<static textres="vehicle_label_starfighter_complement" />
-			</label_column>
-			<string_columnh name="starfighter_complement">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
-			</string_columnh>
-
-			<label_column name="vehicle_complement_label">
-				<static textres="vehicle_label_vehicle_complement" />
-			</label_column>
-			<string_columnh name="vehicle_complement">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
-			</string_columnh>
-
-
 			<label_column name="encumbrance_capacity_label">
 				<static textres="vehicle_label_encumbrance_capacity" />
 			</label_column>
@@ -466,17 +445,6 @@
 
 
 			<line_column name="divider" />
-
-			<label_column name="additional_rules_label">
-				<static textres="vehicle_label_additional_rules" />
-			</label_column>
-			<string_columnh name="additional_rules">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
-			</string_columnh>
-
 
 			<ft_columnh name="notes" />
 
@@ -879,33 +847,13 @@
 			<label_column name="compliment_label">
 				<static textres="vehicle_label_compliment" />
 			</label_column>
+
 			<string_columnh name="compliment">
 				<anchored>
 					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
 					<left offset="135" />
 				</anchored>
 			</string_columnh>
-
-			<label_column name="starfighter_complement_label">
-				<static textres="vehicle_label_starfighter_complement" />
-			</label_column>
-			<string_columnh name="starfighter_complement">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
-			</string_columnh>
-
-			<label_column name="vehicle_complement_label">
-				<static textres="vehicle_label_vehicle_complement" />
-			</label_column>
-			<string_columnh name="vehicle_complement">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
-			</string_columnh>
-
 
 			<label_column name="encumbrance_capacity_label">
 				<static textres="vehicle_label_encumbrance_capacity" />
@@ -1032,17 +980,6 @@
 
 
 			<line_column name="divider" />
-
-			<label_column name="additional_rules_label">
-				<static textres="vehicle_label_additional_rules" />
-			</label_column>
-			<string_columnh name="additional_rules">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
-			</string_columnh>
-
 
 			<ft_columnh name="notes" />
 
