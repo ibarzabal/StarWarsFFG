@@ -46,6 +46,7 @@
 	<!-- Campaign Records -->
 	<includefile source="campaign/record_npc_main.xml" />
 	<includefile source="campaign/record_talent.xml" />
+	<includefile source="campaign/record_item_attachment.xml" />
 
 
 </root>

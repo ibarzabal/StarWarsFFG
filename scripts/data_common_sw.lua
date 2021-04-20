@@ -419,3 +419,141 @@ critical_injury_result_data = {
 			severity = 999,
 		}
 };
+
+
+	critical_vehicle_result_data = {
+		["Mechanical Stress"] = {
+				d100_start = 1,
+				d100_end = 9,
+				name = "Mechanical Stress",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 1,
+			},
+		["Jostled"] = {
+				d100_start = 10,
+				d100_end = 18,
+				name = "Jostled",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 1,
+			},
+		["Losing Power to Shields"] = {
+				d100_start = 19,
+				d100_end = 27,
+				name = "Losing Power to Shields",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 1,
+			},
+		["Knocked Off Course"] = {
+				d100_start = 28,
+				d100_end = 36,
+				name = "Knocked Off Course",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 1,
+			},
+		["Tailspin"] = {
+				d100_start = 37,
+				d100_end = 45,
+				name = "Tailspin",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 1,
+			},
+		["Component Hit"] = {
+				d100_start = 46,
+				d100_end = 54,
+				name = "Component Hit (1)",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 1,
+			},
+		["Failing"] = {
+				d100_start = 55,
+				d100_end = 63,
+				name = "Shields Failing",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 2,
+			},
+		["Navicomputer Failure"] = {
+				d100_start = 64,
+				d100_end = 72,
+				name = "Navicomputer Failure",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 2,
+			},
+		["Power Fluctuations"] = {
+				d100_start = 73,
+				d100_end = 81,
+				name = "Power Fluctuations",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 2,
+			},
+		["Shields Down"] = {
+				d100_start = 82,
+				d100_end = 90,
+				name = "Shields Down",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 3,
+			},
+		["Engine Damaged"] = {
+				d100_start = 91,
+				d100_end = 99,
+				name = "Engine Damaged",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 3,
+			},
+		["Shield Overload"] = {
+				d100_start = 100,
+				d100_end = 108,
+				name = "Shield Overload",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 3,
+			},
+		["Engines Down"] = {
+				d100_start = 109,
+				d100_end = 117,
+				name = "Engines Down",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 3,
+			},
+		["Major System Failure"] = {
+				d100_start = 118,
+				d100_end = 126,
+				name = "Major System Failure",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 3,
+			},
+		["Gruesome Injury"] = {
+				d100_start = 127,
+				d100_end = 133,
+				name = "Major Hull Breach",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 4,
+			},
+		["Destabilized"] = {
+				d100_start = 134,
+				d100_end = 138,
+				name = "Destabilized",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 4,
+			},
+		["Fire!"] = {
+				d100_start = 139,
+				d100_end = 144,
+				name = "Fire! (4)",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 4,
+			},
+		["Breaking Up"] = {
+				d100_start = 145,
+				d100_end = 153,
+				name = "Breaking Up",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 4,
+			},
+		["Vaporized"] = {
+				d100_start = 154,
+				d100_end = 9999,
+				name = "Vaporized",
+				description = "<p>See page 244 Edge of the Empire(tm) or page 258 Age of Rebellion(tm).</p>",
+				severity = 999,
+			}
+	};
+	

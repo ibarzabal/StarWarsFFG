@@ -22,7 +22,14 @@
   <string name="species_archetype">Species</string>
 	<string name="library_recordtype_label_species_archetype">Species</string>
 	<string name="library_recordtype_empty_species_archetype">&#171; New Species &#187;</string>
+  <string name="library_recordtype_label_item_attachment">Attachments</string>
 	<string name="record_label_species_archetype">Species</string>
 	<string name="record_label_racialtrait">Species Trait</string>
 	<string name="talent_label_trees">Trees</string>
+
+	<!-- Item Attachment window  -->
+	<string name="item_attachment_modifiers_label">Base Modifiers</string>
+	<string name="item_attachment_modification_options_label">Modification Options</string>
+
+
 </root>
