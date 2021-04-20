@@ -84,12 +84,12 @@
 			<label_column name="modification_options_label">
 				<static textres="item_attachment_modification_options_label" />
 			</label_column>
-			<string_columnh name="modification_options">
+			<ft_columnh name="modification_options">
 				<anchored>
 					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
 					<left offset="135" />
 				</anchored>
-			</string_columnh>
+			</ft_columnh>
 
       <label_column name="hardpoints_required_label">
 				<static textres="item_attachment_hardpoints_required_label" />
