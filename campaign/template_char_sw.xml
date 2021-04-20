@@ -7,10 +7,14 @@
 
 <root>
 
-<framedef name="statblock_vehicle">
-	<bitmap file="graphics/frames/stat_block_vehicle_sw.png" />
-	<middle>0,0,479,182</middle>
-</framedef>
+	<template name="button_defense">
+		<buttonfield>
+			<state icon="button_career_on" />
+			<state icon="button_career_off" />
+		</buttonfield>
+	</template>
+
+
 
 
 </root>

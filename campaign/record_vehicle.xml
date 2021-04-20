@@ -176,21 +176,84 @@
 							<static>Defense</static>
 						</title_statblock>
 			-->
+
+
+				<!-- Labels show up when the related degense slot is disabled -->
+				<label name="vehicle_defense_fore_dash" >
+					<static>----</static>
+					<anchored to="main_statblock1" position="insidetopleft" offset="383,17" height="20" />
+					<invisible />
+				</label>
+				<label name="vehicle_defense_port_dash" >
+					<static>----</static>
+					<anchored to="main_statblock1" position="insidetopleft" offset="315,83" height="20" />
+					<invisible />
+				</label>
+				<label name="vehicle_defense_starboard_dash" >
+					<static>----</static>
+					<anchored to="main_statblock1" position="insidetopleft" offset="449,83" height="20" />
+					<invisible />
+				</label>
+				<label name="vehicle_defense_aft_dash" >
+					<static>----</static>
+					<anchored to="main_statblock1" position="insidetopleft" offset="383,150" height="20" />
+					<invisible />
+				</label>
+
+
 				<sheetnumberfieldtr name="vehicle_defense_fore" source="defense.fore">
 					<anchored to="main_statblock1" position="insidetopleft" offset="378,17" height="20" />
 				</sheetnumberfieldtr>
-
 				<sheetnumberfieldtr name="vehicle_defense_port" source="defense.port">
 					<anchored to="main_statblock1" position="insidetopleft" offset="310,83" height="20" />
 				</sheetnumberfieldtr>
-
 				<sheetnumberfieldtr name="vehicle_defense_starboard" source="defense.starboard">
 					<anchored to="main_statblock1" position="insidetopleft" offset="444,83" height="20" />
 				</sheetnumberfieldtr>
-
 				<sheetnumberfieldtr name="vehicle_defense_aft" source="defense.aft">
 					<anchored to="main_statblock1" position="insidetopleft" offset="378,150" height="20" />
 				</sheetnumberfieldtr>
+
+
+				<button_defense name="defense_fore_disabled" source="defense.fore_disabled">
+					<script>
+						function onValueChanged()
+							window.updateDefense();
+						end
+					</script>
+					<anchored to="main_statblock1" position="insidetopleft" offset="410,5" width="12" height="12"/>
+					<tooltip textres="defense_fore_disabled_tooltip" />
+				</button_defense>
+
+				<button_defense name="defense_port_disabled" source="defense.port_disabled">
+					<script>
+						function onValueChanged()
+							window.updateDefense();
+						end
+					</script>
+					<anchored to="main_statblock1" position="insidetopleft" offset="343,71"  width="12" height="12"/>
+					<tooltip textres="defense_port_disabled_tooltip" />
+				</button_defense>
+
+				<button_defense name="defense_starboard_disabled" source="defense.starboard_disabled">
+					<script>
+						function onValueChanged()
+							window.updateDefense();
+						end
+					</script>
+					<anchored to="main_statblock1" position="insidetopleft" offset="476,71" width="12" height="12" />
+					<tooltip textres="defense_starboard_disabled_tooltip" />
+				</button_defense>
+
+				<button_defense name="defense_aft_disabled" source="defense.aft_disabled">
+					<script>
+						function onValueChanged()
+							window.updateDefense();
+						end
+					</script>
+					<anchored to="main_statblock1" position="insidetopleft" offset="410,138" width="12" height="12"/>
+					<tooltip textres="defense_aft_disabled_tooltip" />
+				</button_defense>
 
 
 <!--			<anchor_column name="columnanchor" /> -->
@@ -204,27 +267,93 @@
 			<label_column name="type_label">
 				<static textres="vehicle_label_type" />
 			</label_column>
-			<string_columnh name="type" />
 
-			<label_column name="control_skill_label">
-				<static textres="vehicle_label_control_skill" />
+			<string_columnh name="type">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="manufacturer_label">
+				<static textres="vehicle_label_manufacturer" />
 			</label_column>
-			<string_columnh name="control_skill" />
+			<string_columnh name="manufacturer">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="maximum_altitude_label">
+				<static textres="vehicle_label_maximum_altitude" />
+			</label_column>
+			<string_columnh name="maximum_altitude">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="hyperdrive_label">
+				<static textres="vehicle_label_hyperdrive" />
+			</label_column>
+			<string_columnh name="hyperdrive">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="navicomputer_label">
+				<static textres="vehicle_label_navicomputer" />
+			</label_column>
+			<string_columnh name="navicomputer">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="sensor_range_label">
+				<static textres="vehicle_label_sensor_range" />
+			</label_column>
+			<string_columnh name="sensor_range">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="compliment_label">
 				<static textres="vehicle_label_compliment" />
 			</label_column>
-			<string_columnh name="compliment" />
+			<string_columnh name="compliment">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="passenger_capacity_label">
 				<static textres="vehicle_label_passenger_capacity" />
 			</label_column>
-			<string_columnh name="passenger_capacity" />
+			<string_columnh name="passenger_capacity">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="cost_label">
 				<static textres="vehicle_label_cost" />
 			</label_column>
-			<string_columnh name="cost" />
+			<string_columnh name="cost">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="rarity_label">
 				<static textres="item_label_rarity" />
@@ -261,6 +390,10 @@
 				<delaykeyupdate />
 			</number_columnh>
 
+			<label_column name="control_skill_label">
+				<static textres="vehicle_label_control_skill" />
+			</label_column>
+			<string_columnh name="control_skill" />
 
 			<!-- weapons -->
 			<header_column name="weapons_header">
@@ -556,21 +689,84 @@
 							<static>Defense</static>
 						</title_statblock>
 			-->
-				<sheetnumberfieldtr name="vehicle_defense_fore" source="defense.fore">
-					<anchored to="main_statblock1" position="insidetopleft" offset="378,17" height="20" />
-				</sheetnumberfieldtr>
 
-				<sheetnumberfieldtr name="vehicle_defense_port" source="defense.port">
-					<anchored to="main_statblock1" position="insidetopleft" offset="310,83" height="20" />
-				</sheetnumberfieldtr>
+			<!-- Labels show up when the related degense slot is disabled -->
+			<label name="vehicle_defense_fore_dash" >
+				<static>----</static>
+				<anchored to="main_statblock1" position="insidetopleft" offset="383,17" height="20" />
+				<invisible />
+			</label>
+			<label name="vehicle_defense_port_dash" >
+				<static>----</static>
+				<anchored to="main_statblock1" position="insidetopleft" offset="315,83" height="20" />
+				<invisible />
+			</label>
+			<label name="vehicle_defense_starboard_dash" >
+				<static>----</static>
+				<anchored to="main_statblock1" position="insidetopleft" offset="449,83" height="20" />
+				<invisible />
+			</label>
+			<label name="vehicle_defense_aft_dash" >
+				<static>----</static>
+				<anchored to="main_statblock1" position="insidetopleft" offset="383,150" height="20" />
+				<invisible />
+			</label>
 
-				<sheetnumberfieldtr name="vehicle_defense_starboard" source="defense.starboard">
-					<anchored to="main_statblock1" position="insidetopleft" offset="444,83" height="20" />
-				</sheetnumberfieldtr>
 
-				<sheetnumberfieldtr name="vehicle_defense_aft" source="defense.aft">
-					<anchored to="main_statblock1" position="insidetopleft" offset="378,150" height="20" />
-				</sheetnumberfieldtr>
+			<sheetnumberfieldtr name="vehicle_defense_fore" source="defense.fore">
+				<anchored to="main_statblock1" position="insidetopleft" offset="378,17" height="20" />
+			</sheetnumberfieldtr>
+			<sheetnumberfieldtr name="vehicle_defense_port" source="defense.port">
+				<anchored to="main_statblock1" position="insidetopleft" offset="310,83" height="20" />
+			</sheetnumberfieldtr>
+			<sheetnumberfieldtr name="vehicle_defense_starboard" source="defense.starboard">
+				<anchored to="main_statblock1" position="insidetopleft" offset="444,83" height="20" />
+			</sheetnumberfieldtr>
+			<sheetnumberfieldtr name="vehicle_defense_aft" source="defense.aft">
+				<anchored to="main_statblock1" position="insidetopleft" offset="378,150" height="20" />
+			</sheetnumberfieldtr>
+
+
+			<button_defense name="defense_fore_disabled" source="defense.fore_disabled">
+				<script>
+					function onValueChanged()
+						window.updateDefense();
+					end
+				</script>
+				<anchored to="main_statblock1" position="insidetopleft" offset="410,5" width="12" height="12"/>
+				<tooltip textres="defense_fore_disabled_tooltip" />
+			</button_defense>
+
+			<button_defense name="defense_port_disabled" source="defense.port_disabled">
+				<script>
+					function onValueChanged()
+						window.updateDefense();
+					end
+				</script>
+				<anchored to="main_statblock1" position="insidetopleft" offset="343,71"  width="12" height="12"/>
+				<tooltip textres="defense_port_disabled_tooltip" />
+			</button_defense>
+
+			<button_defense name="defense_starboard_disabled" source="defense.starboard_disabled">
+				<script>
+					function onValueChanged()
+						window.updateDefense();
+					end
+				</script>
+				<anchored to="main_statblock1" position="insidetopleft" offset="476,71" width="12" height="12" />
+				<tooltip textres="defense_starboard_disabled_tooltip" />
+			</button_defense>
+
+			<button_defense name="defense_aft_disabled" source="defense.aft_disabled">
+				<script>
+					function onValueChanged()
+						window.updateDefense();
+					end
+				</script>
+				<anchored to="main_statblock1" position="insidetopleft" offset="410,138" width="12" height="12"/>
+				<tooltip textres="defense_aft_disabled_tooltip" />
+			</button_defense>
+
 
 			<genericcontrol name="columnanchor">
 				<anchored position="insidetop" offset="0,200" height="0"/>
@@ -582,27 +778,94 @@
 			<label_column name="type_label">
 				<static textres="vehicle_label_type" />
 			</label_column>
-			<string_columnh name="type" />
+			<string_columnh name="type">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
 
-			<label_column name="control_skill_label">
-				<static textres="vehicle_label_control_skill" />
+			<label_column name="manufacturer_label">
+				<static textres="vehicle_label_manufacturer" />
 			</label_column>
-			<string_columnh name="control_skill" />
+			<string_columnh name="manufacturer">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="maximum_altitude_label">
+				<static textres="vehicle_label_maximum_altitude" />
+			</label_column>
+			<string_columnh name="maximum_altitude">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="hyperdrive_label">
+				<static textres="vehicle_label_hyperdrive" />
+			</label_column>
+			<string_columnh name="hyperdrive">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="navicomputer_label">
+				<static textres="vehicle_label_navicomputer" />
+			</label_column>
+			<string_columnh name="navicomputer">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="sensor_range_label">
+				<static textres="vehicle_label_sensor_range" />
+			</label_column>
+			<string_columnh name="sensor_range">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
 
 			<label_column name="compliment_label">
 				<static textres="vehicle_label_compliment" />
 			</label_column>
-			<string_columnh name="compliment" />
+
+			<string_columnh name="compliment">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="passenger_capacity_label">
 				<static textres="vehicle_label_passenger_capacity" />
 			</label_column>
-			<string_columnh name="passenger_capacity" />
+			<string_columnh name="passenger_capacity">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="cost_label">
 				<static textres="vehicle_label_cost" />
 			</label_column>
-			<string_columnh name="cost" />
+			<string_columnh name="cost">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="rarity_label">
 				<static textres="item_label_rarity" />
@@ -638,6 +901,11 @@
 			<number_columnh name="hard_points">
 				<delaykeyupdate />
 			</number_columnh>
+
+			<label_column name="control_skill_label">
+				<static textres="vehicle_label_control_skill" />
+			</label_column>
+			<string_columnh name="control_skill" />
 
 
 			<!-- weapons -->

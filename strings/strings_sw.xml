@@ -32,4 +32,21 @@
 	<string name="item_attachment_modification_options_label">Modification Options</string>
 
 
+	<!-- Vehicles -->
+	<string name="vehicle_label_type">Vehicle Type/Model</string>
+	<string name="vehicle_label_compliment">Crew/Ship's Comp.</string>
+				<!-- These are new fields in SW vehicles: -->
+	<string name="vehicle_label_manufacturer">Manufacturer</string>
+	<string name="vehicle_label_maximum_altitude">Maximum Altitude</string>
+	<string name="vehicle_label_hyperdrive">Hyperdrive</string>
+	<string name="vehicle_label_navicomputer">Navicomputer</string>
+	<string name="vehicle_label_sensor_range">Sensor Range</string>
+
+	<string name ="defense_fore_disabled_tooltip">Fore Defense Enable/Disable</string>
+	<string name ="defense_port_disabled_tooltip">Port Defense Enable/Disable</string>
+	<string name ="defense_starboard_disabled_tooltip">Starboard Defense Enable/Disable</string>
+	<string name ="defense_aft_disabled_tooltip">Aft Defense Enable/Disable</string>
+
+
+
 </root>

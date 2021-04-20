@@ -53,6 +53,11 @@ function linkPCFields(nodeVehicle)
   main_statblock1_speed.setLink(nodeVehicle.createChild("speed.max","number"));
   main_statblock1_handling.setLink(nodeVehicle.createChild("handling","number"));
 
+	defense_fore_disabled.setLink(nodeVehicle.createChild("defense.fore_disabled","number"));
+	defense_port_disabled.setLink(nodeVehicle.createChild("defense.port_disabled","number"));
+	defense_starboard_disabled.setLink(nodeVehicle.createChild("defense.starboard_disabled","number"));
+	defense_aft_disabled.setLink(nodeVehicle.createChild("defense.aft_disabled","number"));
+
 	vehicle_defense_fore.setLink(nodeVehicle.createChild("defense.fore","number"));
 	vehicle_defense_port.setLink(nodeVehicle.createChild("defense.port","number"));
 	vehicle_defense_starboard.setLink(nodeVehicle.createChild("defense.starboard","number"));
@@ -67,6 +72,13 @@ function linkPCFields(nodeVehicle)
 	owner.setLink(current_vehicle_owner_node.createChild("name","string"));
 	name.setLink(nodeVehicle.createChild("name","string"));
 	type.setLink(nodeVehicle.createChild("type","string"));
+
+
+	manufacturer.setLink(nodeVehicle.createChild("manufacturer","string"));
+	maximum_altitude.setLink(nodeVehicle.createChild("maximum_altitude","string"));
+	hyperdrive.setLink(nodeVehicle.createChild("hyperdrive","string"));
+	navicomputer.setLink(nodeVehicle.createChild("navicomputer","string"));
+	sensor_range.setLink(nodeVehicle.createChild("sensor_range","string"));
 
 	control_skill.setLink(nodeVehicle.createChild("control_skill","string"));
 	compliment.setLink(nodeVehicle.createChild("compliment","string"));
@@ -105,5 +117,16 @@ function linkPCFields(nodeVehicle)
 			DBManagerGenesys.copyNode(criticalsnode, temp_c_node);
 		end
 	end
+end
 
+function updateVisibilityDefSlots()
+	vehicle_defense_fore_dash.setVisible(defense_fore_disabled.getValue() == 1);
+	vehicle_defense_port_dash.setVisible(defense_port_disabled.getValue() == 1);
+	vehicle_defense_starboard_dash.setVisible(defense_starboard_disabled.getValue() == 1);
+	vehicle_defense_aft_dash.setVisible(defense_aft_disabled.getValue() == 1);
+
+	vehicle_defense_fore.setVisible(defense_fore_disabled.getValue() == 0);
+	vehicle_defense_port.setVisible(defense_port_disabled.getValue() == 0);
+	vehicle_defense_starboard.setVisible(defense_starboard_disabled.getValue() == 0);
+	vehicle_defense_aft.setVisible(defense_aft_disabled.getValue() == 0);
 end

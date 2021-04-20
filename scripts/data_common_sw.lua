@@ -63,138 +63,137 @@ skilldata = {
 -- GENERAL SKILLS
 ["Astrogation"] = {
 		characteristic = "IN",
-		description = "<p>The Astrogation skill represents a character's ability to use his knowledge of the galaxy to most efficiently program the hyperspace coordinates for any jump.</p>"
+		description = "" , category = "General"
 	},
 ["Athletics"] = {
-		characteristic = "BR"
+		characteristic = "BR",
+		description = "" , category = "General"
 	},
 ["Charm"] = {
-		characteristic = "PR"
+		characteristic = "PR",
+		description = "" , category = "General"
 	},
 ["Coercion"] = {
-		characteristic = "WI"
+		characteristic = "WI",
+		description = "" , category = "General"
 	},
 ["Computers"] = {
-		characteristic = "IN"
+		characteristic = "IN",
+		description = "" , category = "General"
 	},
 ["Cool"] = {
-		characteristic = "PR"
+		characteristic = "PR",
+		description = "" , category = "General"
 	},
 ["Coordination"] = {
 		characteristic = "AG",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Deception"] = {
 		characteristic = "CU",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Discipline"] = {
 		characteristic = "WI",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Leadership"] = {
 		characteristic = "PR",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Mechanics"] = {
 		characteristic = "IN",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Medicine"] = {
 		characteristic = "IN",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Negotiation"] = {
 		characteristic = "PR",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Perception"] = {
 		characteristic = "CU",
-		description = "<p></p>"
+				description = "" , category = "General"
 	},
 ["Piloting (Planetary)"] = {
 		characteristic = "AG",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Piloting (Space)"] = {
 		characteristic = "AG",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Resilience"] = {
 		characteristic = "BR",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Skulduggery"] = {
 		characteristic = "CU",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Stealth"] = {
 		characteristic = "AG",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Streetwise"] = {
 		characteristic = "CU",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Survival"] = {
 		characteristic = "CU",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 ["Vigilance"] = {
 		characteristic = "WI",
-		description = "<p></p>"
+		description = "" , category = "General"
 	},
 -- COMBAT SKILLS
 ["Brawl"] = {
 		characteristic = "BR",
-		description = "<p>Unarmed combat is governed by the Brawl skill and deals damage equal to the character's Brawn characteristic.</p>",
-		advanced = 1,
+		description = "" , category = "Combat"
 	},
 ["Melee"] = {
 		characteristic = "BR",
-		description = "<p>The training to use weapons to deadly effect while engaged with an enemy makes up the Melee skill. Uses Brawn characteristic.</p>",
-		advanced = 1,
+		description = "" , category = "Combat"
 	},
 ["Ranged (Heavy)"] = {
 		characteristic = "AG",
-		description = "<p>Ranged weapons requiring two hands to wield or aim, including blaster rifles and large thrown weapons such as spears and throwing axes, rely on this skill.</p>",
-		advanced = 1,
+		description = "" , category = "Combat"
 	},
 ["Ranged (Light)"] = {
 		characteristic = "AG",
-		description = "<p>Ranged weapons requiring one hand to wield or aim, including blaster pistols and small thrown weapons such as grenades, rely on this skill.</p>",
-		advanced = 1,
+		description = "" , category = "Combat"
 	},
 ["Gunnery"] = {
 		characteristic = "AG",
-		description = "<p>This skill covers heavy mounted weapons as well as starship weapons. These weapons are too heavy to carry.</p>",
-		advanced = 1,
+		description = "" , category = "Combat"
 	},
 -- KNOWLEDGE SKILLS
 ["Knowledge (Core Worlds)"] = {
 		characteristic = "IN",
-		description = "<p>Knowledge of the culture, planets and systems of the Core Worlds.</p>",
-		knowledge = 1,
+		description = "" , category = "Knowledge"
 	},
 ["Knowledge (Education)"] = {
 		characteristic = "IN",
-		description = "<p>Indication of the general level of the character's education.  Reading, mathmatics, basic sciences and engineering, etc..</p>",
+		description = "" , category = "Knowledge"
 	},
 ["Knowledge (Lore)"] = {
 		characteristic = "IN",
-		description = "<p>Deciphering ancient script and knowledge of ancient legends.</p>",
+		description = "" , category = "Knowledge"
 	},
 ["Knowledge (Outer Rim)"] = {
 		characteristic = "IN",
-		description = "<p>Knowledge of the culture, planets and systems of the Outer Rim</p>",
+		description = "" , category = "Knowledge"
 	},
 ["Knowledge (Underworld)"] = {
 		characteristic = "IN",
-		description = "<p>Knowledge of illegal activities and the criminal hotspot lcoations.</p>",
+		description = "" , category = "Knowledge"
 	},
 ["Knowledge (Xenology)"] = {
 		characteristic = "IN",
-		description = "<p>Knowledge of the different alien species; including culture, habits and physical traits.</p>",
+		description = "" , category = "Knowledge"
 	},
 
 
@@ -202,12 +201,12 @@ skilldata = {
 -- FORCE AND DESTINY
 ["Lightsaber"] = {
 		characteristic = "BR",
-		description = "<p>Weapon Skill from Force and Destiny(tm).</p>",
+		description = "" , category = "Combat"
 	},
 	-- AGE OF REBELLION
 	["Knowledge (Warfare)"] = {
 		characteristic = "IN",
-		description = "<p>Knowledge skill from Age of Rebellion(tm).</p>",
+		description = "" , category = "Knowledge"
 	}
 };
 
@@ -556,4 +555,3 @@ critical_injury_result_data = {
 				severity = 999,
 			}
 	};
-	

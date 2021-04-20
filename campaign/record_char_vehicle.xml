@@ -61,7 +61,7 @@
 				<bounds>0,10,479,182</bounds>
 			</frame_statblock_vehicle>
 			<!-- Silhouette -->
-			<vehicle_stat_linked name="main_statblock1_silhouette" source="silhouette">
+			<vehicle_stat_linked name="main_statblock1_silhouette" source=".temp_vehicle.silhouette">
 				<anchored to="main_statblock1" offset="26,29"/>
 				<nolinkwidget />
 				<readonly />
@@ -77,7 +77,7 @@
 			</title_statblock>
 
 			<!-- Speed -->
-			<vehicle_stat_linked name="main_statblock1_speed" source="speed.max">
+			<vehicle_stat_linked name="main_statblock1_speed" source=".temp_vehicle.speed.max">
 				<anchored>
 					<to>main_statblock1</to>
 					<offset>133,29</offset>
@@ -96,7 +96,7 @@
 			</title_statblock>
 
 			<!-- Handling -->
-			<vehicle_stat_linked name="main_statblock1_handling" source="handling">
+			<vehicle_stat_linked name="main_statblock1_handling" source=".temp_vehicle.handling">
 				<displaysign />
 				<minvalue>-999</minvalue>
 				<anchored>
@@ -123,7 +123,7 @@
 				<anchored to="main_statblock1" position="insidetopleft" offset="28,107" height="20" />
 				<static>Armor</static>
 			</title_statblock>
-			<sheetnumberfieldtr_linked name="vehicle_armor" source="armor">
+			<sheetnumberfieldtr_linked name="vehicle_armor" source=".temp_vehicle.armor">
 				<anchored to="main_statblock1" position="insidetopleft" offset="35,130" height="20" />
 				<nolinkwidget />
 				<readonly />
@@ -135,7 +135,7 @@
 				<static>Hull Trauma</static>
 			</title_statblock>
 
-			<sheetnumberfieldtr_linked name="hull_trauma_threshold" source="hull_trauma.threshold">
+			<sheetnumberfieldtr_linked name="hull_trauma_threshold" source=".temp_vehicle.hull_trauma.threshold">
 				<tooltip text="Threshold" />
 				<anchored to="main_statblock1" position="insidetopleft" offset="118,127" height="20" />
 				<nolinkwidget />
@@ -151,7 +151,7 @@
 				<invisible />
 			</sheetnumberfieldtr_linked>
 
-			<woundnumberfield name="hull_trauma_current" source="hull_trauma.current">
+			<woundnumberfield name="hull_trauma_current" source=".temp_vehicle.hull_trauma.current">
 				<tooltip text="Current" />
 				<chit>wound</chit>
 				<anchored to="main_statblock1" position="insidetopleft" offset="153,127" height="20" />
@@ -163,13 +163,13 @@
 				<static>System Strain</static>
 			</title_statblock>
 
-			<sheetnumberfieldtr_linked name="system_strain_threshold" source="system_strain.threshold">
+			<sheetnumberfieldtr_linked name="system_strain_threshold" source=".temp_vehicle.system_strain.threshold">
 				<tooltip text="Threshold" />
 				<anchored to="main_statblock1" position="insidetopleft" offset="218,127" height="20" />
 				<nolinkwidget />
 				<readonly />
 			</sheetnumberfieldtr_linked>
-			<woundnumberfield name="system_strain_current" source="system_strain.current">
+			<woundnumberfield name="system_strain_current" source=".temp_vehicle.system_strain.current">
 				<tooltip text="Current" />
 				<chit>strain</chit>
 				<anchored to="main_statblock1" position="insidetopleft" offset="253,127" height="20" />
@@ -181,25 +181,85 @@
 							<static>Defense</static>
 						</title_statblock>
 			-->
-				<sheetnumberfieldtr_linked name="vehicle_defense_fore" source="defense.fore">
+
+			<!-- Labels show up when the related degense slot is disabled -->
+				<label name="vehicle_defense_fore_dash" >
+					<static>----</static>
+					<anchored to="main_statblock1" position="insidetopleft" offset="383,17" height="20" />
+					<invisible />
+				</label>
+				<label name="vehicle_defense_port_dash" >
+					<static>----</static>
+					<anchored to="main_statblock1" position="insidetopleft" offset="315,83" height="20" />
+					<invisible />
+				</label>
+				<label name="vehicle_defense_starboard_dash" >
+					<static>----</static>
+					<anchored to="main_statblock1" position="insidetopleft" offset="449,83" height="20" />
+					<invisible />
+				</label>
+				<label name="vehicle_defense_aft_dash" >
+					<static>----</static>
+					<anchored to="main_statblock1" position="insidetopleft" offset="383,150" height="20" />
+					<invisible />
+				</label>
+
+				<!-- Create invisible controls to hold linked values for checking if defense slots are enabled/disabled -->
+				<sheetnumberfieldtr_linked name="defense_fore_disabled" source=".temp_vehicle.defense.fore_disabled">
+					<script>
+						function onValueChanged()
+							window.updateVisibilityDefSlots();
+						end
+					</script>
+					<anchored to="main_statblock1" position="insidetopleft" offset="378,17" height="20" />
+					<invisible />
+				</sheetnumberfieldtr_linked>
+				<sheetnumberfieldtr_linked name="defense_port_disabled" source=".temp_vehicle.defense.port_disabled">
+					<script>
+						function onValueChanged()
+							window.updateVisibilityDefSlots();
+						end
+					</script>
+					<anchored to="main_statblock1" position="insidetopleft" offset="310,83" height="20" />
+					<invisible />
+				</sheetnumberfieldtr_linked>
+				<sheetnumberfieldtr_linked name="defense_starboard_disabled" source=".temp_vehicle.defense.starboard_disabled">
+					<script>
+						function onValueChanged()
+							window.updateVisibilityDefSlots();
+						end
+					</script>
+					<anchored to="main_statblock1" position="insidetopleft" offset="444,83" height="20" />
+					<invisible />
+				</sheetnumberfieldtr_linked>
+				<sheetnumberfieldtr_linked name="defense_aft_disabled" source=".temp_vehicle.defense.aft_disabled">
+					<script>
+						function onValueChanged()
+							window.updateVisibilityDefSlots();
+						end
+					</script>
+					<anchored to="main_statblock1" position="insidetopleft" offset="378,150" height="20" />
+					<invisible />
+				</sheetnumberfieldtr_linked>
+
+
+
+				<sheetnumberfieldtr_linked name="vehicle_defense_fore" source=".temp_vehicle.defense.fore">
 					<anchored to="main_statblock1" position="insidetopleft" offset="378,17" height="20" />
 					<nolinkwidget />
 					<readonly />
 				</sheetnumberfieldtr_linked>
-
-				<sheetnumberfieldtr_linked name="vehicle_defense_port" source="defense.port">
+				<sheetnumberfieldtr_linked name="vehicle_defense_port" source=".temp_vehicle.defense.port">
 					<anchored to="main_statblock1" position="insidetopleft" offset="310,83" height="20" />
 					<nolinkwidget />
 					<readonly />
 				</sheetnumberfieldtr_linked>
-
-				<sheetnumberfieldtr_linked name="vehicle_defense_starboard" source="defense.starboard">
+				<sheetnumberfieldtr_linked name="vehicle_defense_starboard" source=".temp_vehicle.defense.starboard">
 					<anchored to="main_statblock1" position="insidetopleft" offset="444,83" height="20" />
 					<nolinkwidget />
 					<readonly />
 				</sheetnumberfieldtr_linked>
-
-				<sheetnumberfieldtr_linked name="vehicle_defense_aft" source="defense.aft">
+				<sheetnumberfieldtr_linked name="vehicle_defense_aft" source=".temp_vehicle.defense.aft">
 					<anchored to="main_statblock1" position="insidetopleft" offset="378,150" height="20" />
 					<nolinkwidget />
 					<readonly />
@@ -230,35 +290,73 @@
 				<readonly />
 			</string_columnh_linked>
 
-
 			<label_column name="type_label">
 				<static textres="vehicle_label_type" />
 			</label_column>
 			<string_columnh_linked name="type" source = ".temp_vehicle.type">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
 				<nolinkwidget />
 				<readonly />
 			</string_columnh_linked>
 
-
-
-			<label_column name="control_skill_label">
-				<static textres="vehicle_label_control_skill" />
+			<label_column name="manufacturer_label">
+				<static textres="vehicle_label_manufacturer" />
 			</label_column>
-
-			<skilldicepool>
-				<script file="common/scripts/vehicle_control_skilldicepool.lua" />
-				<anchored to="control_skill_label" width="20" height="20">
-					<top />
-					<left anchor="right" relation="relative" offset="5" />
+			<string_columnh_linked name="manufacturer" source=".temp_vehicle.manufacturer">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
 				</anchored>
-			</skilldicepool>
+				<nolinkwidget />
+				<readonly />
+			</string_columnh_linked>
 
+			<label_column name="maximum_altitude_label">
+				<static textres="vehicle_label_maximum_altitude" />
+			</label_column>
+			<string_columnh_linked name="maximum_altitude" source=".temp_vehicle.maximum_altitude">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+				<nolinkwidget />
+				<readonly />
+			</string_columnh_linked>
 
-			<string_columnh_linked name="control_skill" source = ".temp_vehicle.control_skill" >
-				<anchored mergerule="replace">
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7"/>
-					<left offset="97" />
-					<right offset="-200" />
+			<label_column name="hyperdrive_label">
+				<static textres="vehicle_label_hyperdrive" />
+			</label_column>
+			<string_columnh_linked name="hyperdrive" source=".temp_vehicle.hyperdrive">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+				<nolinkwidget />
+				<readonly />
+			</string_columnh_linked>
+
+			<label_column name="navicomputer_label">
+				<static textres="vehicle_label_navicomputer" />
+			</label_column>
+			<string_columnh_linked name="navicomputer" source=".temp_vehicle.navicomputer">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+				<nolinkwidget />
+				<readonly />
+			</string_columnh_linked>
+
+			<label_column name="sensor_range_label">
+				<static textres="vehicle_label_sensor_range" />
+			</label_column>
+			<string_columnh_linked name="sensor_range" source=".temp_vehicle.sensor_range">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
 				</anchored>
 				<nolinkwidget />
 				<readonly />
@@ -268,6 +366,10 @@
 				<static textres="vehicle_label_compliment" />
 			</label_column>
 			<string_columnh_linked name="compliment" source = ".temp_vehicle.compliment">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
 				<nolinkwidget />
 				<readonly />
 			</string_columnh_linked>
@@ -276,6 +378,10 @@
 				<static textres="vehicle_label_passenger_capacity" />
 			</label_column>
 			<string_columnh_linked name="passenger_capacity" source = ".temp_vehicle.passenger_capacity">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
 				<nolinkwidget />
 				<readonly />
 			</string_columnh_linked>
@@ -310,6 +416,30 @@
 				<nolinkwidget />
 				<readonly />
 			</number_columnh_linked>
+
+			<label_column name="control_skill_label">
+				<static textres="vehicle_label_control_skill" />
+			</label_column>
+
+			<skilldicepool>
+				<script file="common/scripts/vehicle_control_skilldicepool.lua" />
+				<anchored to="control_skill_label" width="20" height="20">
+					<top />
+					<left anchor="right" relation="relative" offset="5" />
+				</anchored>
+			</skilldicepool>
+
+
+			<string_columnh_linked name="control_skill" source = ".temp_vehicle.control_skill" >
+				<anchored mergerule="replace">
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7"/>
+					<left offset="97" />
+					<right offset="-200" />
+				</anchored>
+				<nolinkwidget />
+				<readonly />
+			</string_columnh_linked>
+
 
 
 			<!-- weapons -->

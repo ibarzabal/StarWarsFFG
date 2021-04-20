@@ -33,6 +33,11 @@ function update()
 	local bReadOnly = WindowManager.getReadOnlyState(nodeRecord);
 	local bID = true; --LibraryData.getIDState("item_attachment", nodeRecord);
 	updateControl("type", bReadOnly, bID);
+	updateControl("manufacturer", bReadOnly, bID);
+	updateControl("maximum_altitude", bReadOnly, bID);
+	updateControl("hyperdrive", bReadOnly, bID);
+	updateControl("navicomputer", bReadOnly, bID);
+	updateControl("sensor_range", bReadOnly, bID);
 	updateControl("control_skill", bReadOnly, bID);
 	updateControl("compliment", bReadOnly, bID);
 	updateControl("passenger_capacity", bReadOnly, bID);
@@ -54,23 +59,39 @@ function update()
 	vehicle_defense_fore.setReadOnly(bReadOnly);
 	vehicle_defense_port.setReadOnly(bReadOnly);
 	vehicle_defense_starboard.setReadOnly(bReadOnly);
-	vehicle_defense_aft.setReadOnly(bReadOnly);	
-
-
+	vehicle_defense_aft.setReadOnly(bReadOnly);
 
 	if bReadOnly then
 		attachments_iedit.setVisible(false);
 		weapons_iedit.setVisible(false);
+		defense_fore_disabled.setVisible(false);
+		defense_port_disabled.setVisible(false);
+		defense_starboard_disabled.setVisible(false);
+		defense_aft_disabled.setVisible(false);
 		if critical_damage_iedit then
 			critical_damage_iedit.setVisible(false);
 		end
 	else
 		attachments_iedit.setVisible(true);
 		weapons_iedit.setVisible(true);
+		defense_fore_disabled.setVisible(true);
+		defense_port_disabled.setVisible(true);
+		defense_starboard_disabled.setVisible(true);
+		defense_aft_disabled.setVisible(true);
 		if critical_damage_iedit then
 			critical_damage_iedit.setVisible(true);
 		end
 	end
+
+	vehicle_defense_fore_dash.setVisible(defense_fore_disabled.getValue() == 1);
+	vehicle_defense_port_dash.setVisible(defense_port_disabled.getValue() == 1);
+	vehicle_defense_starboard_dash.setVisible(defense_starboard_disabled.getValue() == 1);
+	vehicle_defense_aft_dash.setVisible(defense_aft_disabled.getValue() == 1);
+
+	vehicle_defense_fore.setVisible(defense_fore_disabled.getValue() == 0);
+	vehicle_defense_port.setVisible(defense_port_disabled.getValue() == 0);
+	vehicle_defense_starboard.setVisible(defense_starboard_disabled.getValue() == 0);
+	vehicle_defense_aft.setVisible(defense_aft_disabled.getValue() == 0);
 
 --	if OptionsManager.isOption("VHPT", "off") then
 --		hard_points_label.setVisible(false);
@@ -86,6 +107,23 @@ function update()
 end
 
 
+function updateDefense()
+	if User.isHost() or getDatabaseNode().isOwner() then
+		if defense_fore_disabled.getValue() == 1 then
+			vehicle_defense_fore.setValue(0);
+		end
+		if defense_port_disabled.getValue() == 1 then
+			vehicle_defense_port.setValue(0);
+		end
+		if defense_starboard_disabled.getValue() == 1 then
+			vehicle_defense_starboard.setValue(0);
+		end
+		if defense_aft_disabled.getValue() == 1 then
+			vehicle_defense_aft.setValue(0);
+		end
+	end
+	update();
+end
 
 
 function onDrop(x, y, draginfo)

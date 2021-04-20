@@ -48,10 +48,12 @@
 	<script name="DataCommon" file="scripts/data_common_sw.lua" />
 
 	<!-- Campaign Records -->
+	<includefile source="campaign/template_char_sw.xml" />
 	<includefile source="campaign/record_npc_main.xml" />
 	<includefile source="campaign/record_talent.xml" />
 	<includefile source="campaign/record_vehicle.xml" />
 	<includefile source="campaign/record_item_attachment.xml" />
 	<includefile source="campaign/record_char_vehicle.xml" />
+
 
 </root>
