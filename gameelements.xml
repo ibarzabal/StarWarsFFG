@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+	<distance>
+		<base>5</base>
+		<diagmult>1.5</diagmult>
+		<suffix>'</suffix>
+	</distance>
+
+	<!-- Repositioning dice on desktop -->
+
+	<!-- d4 -->
+	<die name="d4">
+		<icon>d4icon</icon>
+		<position>-435,-60</position>
+	</die>
+
+	<!-- d6 -->
+	<die name="d6">
+		<icon>d6icon</icon>
+		<position>-385,-60</position>
+	</die>
+
+	<!-- d8 -->
+	<die name="d8">
+		<icon>d8icon</icon>
+		<position>-335,-60</position>
+	</die>
+
+	<!-- d12 -->
+	<die name="d12">
+		<icon>d12icon</icon>
+		<position>-285,-60</position>
+	</die>
+
+	<!-- d20 -->
+	<die name="d20">
+		<icon>d20icon</icon>
+		<position>-235,-60</position>
+	</die>
+
+	<die name="dF" merge="delete" />
+	<die name="rF" merge="delete" />
+	<die name="gF" merge="delete" />
+	<die name="bF" merge="delete" />
+	<die name="pF" merge="delete" />
+
+<!--
+	<die name="d4" merge="delete"/>
+	<die name="d6" merge="delete"/>
+	<die name="d8" merge="delete"/>
+	<die name="d12" merge="delete"/>
+	<die name="d20" merge="delete"/>
+	<die name="d100" merge="delete"/>
+
+	<customdie name="d4">
+		<model>d4</model>
+		<icon>d4icon</icon>
+	</customdie>
+	<customdie name="d6">
+		<model>d6</model>
+		<icon>d6icon</icon>
+	</customdie>
+	<customdie name="d8">
+		<model>d8</model>
+		<icon>d8icon</icon>
+	</customdie>
+	<customdie name="d12">
+		<model>d12</model>
+		<icon>d12icon</icon>
+	</customdie>
+	<customdie name="d20">
+		<model>d20</model>
+		<icon>d20icon</icon>
+	</customdie>
+	<customdie name="d100">
+		<model>d100</model>
+		<icon>d10icon</icon>
+	</customdie>
+
+-->
+
+</root>

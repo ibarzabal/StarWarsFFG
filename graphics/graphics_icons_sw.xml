@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+<!-- 	<icon name="desktopdecal_sw" file="graphics/decals/genesys_logo.png" /> -->
+	<icon name="desktopdecal_sw_core" file="graphics/decals/SW_decal.png" />
+	<icon name="rulesetlogo_SWRPG" file="graphics/icons/rulesetlogo_SW.png" />
+
+
+	<!-- Custom dice panels -->
+	<icon name="dBoost" file="graphics/icons/dBoost.png" />
+	<icon name="dSetback" file="graphics/icons/dSetback.png" />
+	<icon name="dAbility" file="graphics/icons/dAbility.png" />
+	<icon name="dDifficulty" file="graphics/icons/dDifficulty.png" />
+	<icon name="dProficiency" file="graphics/icons/dProficiency.png" />
+	<icon name="dChallenge" file="graphics/icons/dChallenge.png" />
+	<icon name="dForce" file="graphics/icons/dForce.png" />
+</root>
