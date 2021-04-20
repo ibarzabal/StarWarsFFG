@@ -27,6 +27,9 @@
 	<string name="record_label_racialtrait">Species Trait</string>
 	<string name="talent_label_trees">Trees</string>
 
+	<!-- Item window -->
+	<string name="item_label_compatible_silhouettes">Compatible Silhouettes</string>
+
 	<!-- Item Attachment window  -->
 	<string name="item_attachment_modifiers_label">Base Modifiers</string>
 	<string name="item_attachment_modification_options_label">Modification Options</string>

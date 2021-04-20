@@ -335,6 +335,24 @@
 				</anchored>
 			</string_columnh>
 
+			<label_column name="encumbrance_capacity_label">
+				<static textres="vehicle_label_encumbrance_capacity" />
+			</label_column>
+			<number_columnh name="encumbrance_capacity">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</number_columnh>
+
+			<string_columnh name="encumbrance_capacity_notes">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="-20" />
+					<left offset="185" />
+				</anchored>
+			</string_columnh>
+
+
 			<label_column name="passenger_capacity_label">
 				<static textres="vehicle_label_passenger_capacity" />
 			</label_column>
@@ -364,18 +382,6 @@
 					<left offset="135" />
 				</anchored>
 			</number_columnh>
-
-
-			<label_column name="encumbrance_capacity_label">
-				<static textres="vehicle_label_encumbrance_capacity" />
-			</label_column>
-			<number_columnh name="encumbrance_capacity">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
-			</number_columnh>
-
 
 			<label_column name="consumables_label">
 				<static textres="vehicle_label_consumables" />
@@ -847,6 +853,17 @@
 				</anchored>
 			</string_columnh>
 
+			<label_column name="encumbrance_capacity_label">
+				<static textres="vehicle_label_encumbrance_capacity" />
+			</label_column>
+			<number_columnh name="encumbrance_capacity">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</number_columnh>
+
+
 			<label_column name="passenger_capacity_label">
 				<static textres="vehicle_label_passenger_capacity" />
 			</label_column>
@@ -876,18 +893,6 @@
 					<left offset="135" />
 				</anchored>
 			</number_columnh>
-
-
-			<label_column name="encumbrance_capacity_label">
-				<static textres="vehicle_label_encumbrance_capacity" />
-			</label_column>
-			<number_columnh name="encumbrance_capacity">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
-			</number_columnh>
-
 
 			<label_column name="consumables_label">
 				<static textres="vehicle_label_consumables" />

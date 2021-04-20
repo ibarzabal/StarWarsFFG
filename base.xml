@@ -54,6 +54,6 @@
 	<includefile source="campaign/record_vehicle.xml" />
 	<includefile source="campaign/record_item_attachment.xml" />
 	<includefile source="campaign/record_char_vehicle.xml" />
-
+	<includefile source="campaign/record_item.xml" />
 
 </root>
