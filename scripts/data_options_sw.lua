@@ -6,4 +6,5 @@
 function onInit()
 	OptionsManager.addOptionValue("DDCL", "option_val_DDCL_sw_core", "desktopdecal_sw_core", true);
 	OptionsManager.setOptionDefault("DDCL", "desktopdecal_sw_core");
+
 end

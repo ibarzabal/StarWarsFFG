@@ -112,11 +112,11 @@ skilldata = {
 		characteristic = "CU",
 		description = "<p></p>"
 	},
-["Pilot - Planet"] = {
+["Piloting (Planetary)"] = {
 		characteristic = "AG",
 		description = "<p></p>"
 	},
-["Pilot - Space"] = {
+["Piloting (Space)"] = {
 		characteristic = "AG",
 		description = "<p></p>"
 	},
@@ -171,28 +171,28 @@ skilldata = {
 		advanced = 1,
 	},
 -- KNOWLEDGE SKILLS
-["Core Worlds"] = {
+["Knowledge (Core Worlds)"] = {
 		characteristic = "IN",
 		description = "<p>Knowledge of the culture, planets and systems of the Core Worlds.</p>",
 		knowledge = 1,
 	},
-["Educations"] = {
+["Knowledge (Education)"] = {
 		characteristic = "IN",
 		description = "<p>Indication of the general level of the character's education.  Reading, mathmatics, basic sciences and engineering, etc..</p>",
 	},
-["Lore"] = {
+["Knowledge (Lore)"] = {
 		characteristic = "IN",
 		description = "<p>Deciphering ancient script and knowledge of ancient legends.</p>",
 	},
-["Outer Rim"] = {
+["Knowledge (Outer Rim)"] = {
 		characteristic = "IN",
 		description = "<p>Knowledge of the culture, planets and systems of the Outer Rim</p>",
 	},
-["Underworld"] = {
+["Knowledge (Underworld)"] = {
 		characteristic = "IN",
 		description = "<p>Knowledge of illegal activities and the criminal hotspot lcoations.</p>",
 	},
-["Xenology"] = {
+["Knowledge (Xenology)"] = {
 		characteristic = "IN",
 		description = "<p>Knowledge of the different alien species; including culture, habits and physical traits.</p>",
 	},

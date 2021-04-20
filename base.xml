@@ -8,7 +8,7 @@
 <root version="3.0" release="0.1" logo="logo.png">
 
 
-	<announcement text="Star Wars RPG community ruleset V0.1 (FG 3.3.9+) by John Ibarzabal (a.k.a. Mestre dos Magos), and Sevrick.\r\rNarrative dice code based on work by Neil G. Foster, Trenlo and Lobosolo\rStar Wars RPG (c) by Fantasy Flight Games. All rights reserved.\r\rThis ruleset is a community project developed for no monetary gain and with the understanding that game mechanics are not protected by US Copyright laws.\rAs such, no literary work (which is covered by US Copyright) has been included in this ruleset."  font="emotefont" icon="rulesetlogo_SWRPG" />
+	<announcement text="Star Wars RPG community ruleset V0.1 (FG 3.3.9+) by John Ibarzabal (a.k.a. Mestre dos Magos), and Sevrick.\r\rStar Wars RPG (c) by Fantasy Flight Games. All rights reserved.\r\rThis ruleset is a community project developed for no monetary gain and with the understanding that game mechanics are not protected by US Copyright laws.\rAs such, no literary work (which is covered by US Copyright) has been included in this ruleset."  font="emotefont" icon="rulesetlogo_SWRPG" />
 
 
 
@@ -33,9 +33,18 @@
 
 
 	<!-- Desktop -->
-	<script name="OptionsSW" file="scripts/data_options_sw.lua" />
+	<script name="OptionsGenesys" file="scripts/data_options_sw.lua" />
+	<script name="LibraryDataSW" file="scripts/data_library_sw.lua" />
+
+	<!-- Strings -->
+	<includefile source="strings/strings_sw.xml" />
 
 	<!-- High-level scripts -->
 	<script name="DataCommon" file="scripts/data_common_sw.lua" />
+
+	<!-- Campaign Records -->
+	<includefile source="campaign/record_npc_main.xml" />
+	<includefile source="campaign/record_talent.xml" />
+
 
 </root>
