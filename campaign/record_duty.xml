@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+	<windowclass name="referenceduty">
+		<frame>referencepage</frame>
+		<placement>
+			<size width="400" height="350" />
+		</placement>
+		<sizelimits>
+			<dynamic />
+		</sizelimits>
+		<minimize>minimized_reference</minimize>
+		<tooltip field="name" />
+		<nodelete />
+		<playercontrol />
+		<sharable />
+		<script file="campaign/scripts/duty.lua" />
+
+		<sheetdata>
+			<sub_record_header name="header">
+				<class>ref_duty_header</class>
+			</sub_record_header>
+			<frame_record_content name="contentframe" />
+			<subwindow_record name="main">
+				<class>ref_duty_stats</class>
+				<activate />
+			</subwindow_record>
+			<scrollbar_record>
+				<target>main</target>
+			</scrollbar_record>
+			<resize_recordsheet />
+			<close_recordsheet />
+		</sheetdata>
+	</windowclass>
+
+	<windowclass name="ref_duty_header">
+		<margins control="0,0,0,7" />
+		<script>
+			function onInit()
+				update();
+			end
+			function update()
+				local bReadOnly = WindowManager.getReadOnlyState(getDatabaseNode());
+				name.setReadOnly(bReadOnly);
+			end
+		</script>
+		<sheetdata>
+			<link_record_header>
+				<class>referenceduty</class>
+			</link_record_header>
+
+			<anchor_record_header_right />
+			<icon_record_locked />
+			<button_record_locked />
+			<string_record_name name="name" />
+		</sheetdata>
+	</windowclass>
+
+	<windowclass name="ref_duty_stats">
+		<margins control="0,0,0,2" />
+ 		<script file="campaign/scripts/duty_main.lua" />
+		<sheetdata>
+			<anchor_column name="columnanchor" />
+
+			<label_column name="value_label">
+				<static textres="duty_label_value" />
+			</label_column>
+			<number_columnh name="value" />
+
+
+			<ft_columnh name="description" />
+		</sheetdata>
+	</windowclass>
+
+	<windowclass name="duty_item">
+		<margins control="0,0,0,2" />
+		<sheetdata>
+			<genericcontrol name="rightanchor">
+				<anchored position="insidetopright" offset="0,2" height="0" width="0" />
+			</genericcontrol>
+			<button_idelete name="idelete">
+				<anchored width="20" height="20">
+					<top offset="2" />
+					<right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
+				</anchored>
+			</button_idelete>
+			<linkcontrol name="shortcut">
+				<anchored to="rightanchor" width="20" height="20">
+					<top />
+					<right anchor="left" relation="relative" offset="-2" />
+				</anchored>
+				<class>referenceduty</class>
+				<readonly />
+			</linkcontrol>
+
+			<basenumberfield name="value">
+				<anchored to="rightanchor" width="20" height="20">
+					<top />
+					<right anchor="left" relation="relative" offset="-10" />
+				</anchored>
+			</basenumberfield>
+
+ 			<string_textlistitem name="name">
+				<anchored to="rightanchor">
+					<top />
+					<left parent="" offset="5" />
+					<right anchor="left" relation="relative" offset="-10" />
+				</anchored>
+				<multilinespacing>20</multilinespacing>
+			</string_textlistitem>
+		</sheetdata>
+	</windowclass>
+
+</root>

@@ -27,6 +27,19 @@
 	<string name="record_label_racialtrait">Species Trait</string>
 	<string name="talent_label_trees">Trees</string>
 
+	<!-- Obligation  -->
+	<string name="char_label_obligation">Obligation</string>
+	<string name="obligation_label_value">Value</string>
+
+	<!-- Duty  -->
+	<string name="char_label_duty">Duty</string>
+	<string name="duty_label_value">Value</string>
+
+	<!-- Morality  -->
+	<string name="char_label_morality">Morality</string>
+	<string name="morality_label_value">Value</string>
+
+
 	<!-- Item window -->
 	<string name="item_label_compatible_silhouettes">Compatible Silhouettes</string>
 

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!--
+	  Please see the license.html file included with this distribution for
+	  attribution and copyright information.
+	-->
+	<root>
+    <windowclass name="charsheet_main" merge="join">
+			<sheetdata>
+				<button_iedit name="actions_iedit">
+					<anchored position="insidebottomright" offset="10,10" />
+					<tooltip textres="char_abilities_tooltip_edit" />
+					<script>
+						function onInit()
+							onValueChanged();
+						end
+						function onValueChanged()
+							local bEditMode = (getValue() == 1);
+							window.contents.subwindow.traits_iadd.setVisible(bEditMode);
+							window.contents.subwindow.traits.update();
+							window.contents.subwindow.motivations_iadd.setVisible(bEditMode);
+							window.contents.subwindow.motivations.update();
+              window.contents.subwindow.obligation_iadd.setVisible(bEditMode);
+							window.contents.subwindow.obligation.update();
+              window.contents.subwindow.duty_iadd.setVisible(bEditMode);
+							window.contents.subwindow.duty.update();
+              window.contents.subwindow.morality_iadd.setVisible(bEditMode);
+							window.contents.subwindow.morality.update();
+
+						end
+					</script>
+				</button_iedit>
+      </sheetdata>
+  	</windowclass>
+
+
+
+	<windowclass name="charsheet_main_contents" merge="join">
+		<sheetdata>
+      <label_charframetopg name="obligationtitle">
+        <anchored to="motivationtitle" height="20">
+          <top anchor="bottom" relation="relative" offset="7" />
+          <left />
+          <right />
+        </anchored>
+        <static textres="char_label_obligation" />
+      </label_charframetopg>
+      <list_abilities name="obligation">
+        <anchored to="obligationtitle">
+          <top anchor="bottom" relation="relative" offset="5" />
+          <left />
+          <right />
+        </anchored>
+        <datasource>.obligation</datasource>
+        <class>obligation_item</class>
+        <listheader>obligationtitle</listheader>
+      </list_abilities>
+      <button_iadd name="obligation_iadd">
+        <anchored to="obligationtitle" position="insidetopright" offset="5,0" />
+        <target>obligation</target>
+      </button_iadd>
+
+
+      <label_charframetopg name="dutytitle">
+        <anchored to="obligationtitle" height="20">
+          <top anchor="bottom" relation="relative" offset="7" />
+          <left />
+          <right />
+        </anchored>
+        <static textres="char_label_duty" />
+      </label_charframetopg>
+      <list_abilities name="duty">
+        <anchored to="dutytitle">
+          <top anchor="bottom" relation="relative" offset="5" />
+          <left />
+          <right />
+        </anchored>
+        <datasource>.duty</datasource>
+        <class>duty_item</class>
+        <listheader>dutytitle</listheader>
+      </list_abilities>
+      <button_iadd name="duty_iadd">
+        <anchored to="dutytitle" position="insidetopright" offset="5,0" />
+        <target>duty</target>
+      </button_iadd>
+
+
+      <label_charframetopg name="moralitytitle">
+        <anchored to="dutytitle" height="20">
+          <top anchor="bottom" relation="relative" offset="7" />
+          <left />
+          <right />
+        </anchored>
+        <static textres="char_label_morality" />
+      </label_charframetopg>
+      <list_abilities name="morality">
+        <anchored to="moralitytitle">
+          <top anchor="bottom" relation="relative" offset="5" />
+          <left />
+          <right />
+        </anchored>
+        <datasource>.morality</datasource>
+        <class>morality_item</class>
+        <listheader>moralitytitle</listheader>
+      </list_abilities>
+      <button_iadd name="morality_iadd">
+        <anchored to="moralitytitle" position="insidetopright" offset="5,0" />
+        <target>morality</target>
+      </button_iadd>
+
+
+		</sheetdata>
+	</windowclass>
+
+</root>
