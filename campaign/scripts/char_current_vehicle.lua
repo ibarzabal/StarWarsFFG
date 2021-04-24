@@ -132,6 +132,7 @@ function linkPCFields(nodeVehicle)
 	vehicle_complement.setLink(nodeVehicle.createChild("vehicle_complement","string"));
 	passenger_capacity.setLink(nodeVehicle.createChild("passenger_capacity","string"));
 	encumbrance_capacity.setLink(nodeVehicle.createChild("encumbrance_capacity","number"));
+	encumbrance_capacity_notes.setLink(nodeVehicle.createChild("encumbrance_capacity_notes","string"));
 	consumables.setLink(nodeVehicle.createChild("consumables","string"));
 	hard_points.setLink(nodeVehicle.createChild("hard_points","number"));
 	additional_rules.setLink(nodeVehicle.createChild("additional_rules","string"));

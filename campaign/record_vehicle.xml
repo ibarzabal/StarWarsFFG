@@ -929,6 +929,12 @@
 				</anchored>
 			</number_columnh>
 
+			<string_columnh name="encumbrance_capacity_notes">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="-20" />
+					<left offset="185" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="passenger_capacity_label">
 				<static textres="vehicle_label_passenger_capacity" />

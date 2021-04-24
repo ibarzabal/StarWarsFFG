@@ -411,6 +411,14 @@
 				<readonly />
 			</number_columnh_linked>
 
+			<string_columnh_linked name="encumbrance_capacity_notes" source = ".temp_vehicle.encumbrance_capacity_notes">
+				<anchored width="40">
+					<left parent="encumbrance_capacity" anchor="right" offset="14" />
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="-20" />
+				</anchored>
+				<nolinkwidget />
+				<readonly />
+			</string_columnh_linked>
 
 			<label_column name="passenger_capacity_label">
 				<static textres="vehicle_label_passenger_capacity" />

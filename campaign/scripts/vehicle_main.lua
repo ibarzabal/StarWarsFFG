@@ -43,6 +43,7 @@ function update()
 	updateControl("starfighter_complement", bReadOnly, bID);
 	updateControl("vehicle_complement", bReadOnly, bID);
 	updateControl("passenger_capacity", bReadOnly, bID);
+	updateControl("encumbrance_moreinfo", bReadOnly, bID);
 	updateControl("cost", bReadOnly, bID);
 	updateControl("rarity", bReadOnly, bID);
 	updateControl("encumbrance_capacity", bReadOnly, bID);
