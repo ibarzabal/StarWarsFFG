@@ -9,9 +9,7 @@
 	<string name="dicepool_tracker_window_title">Dicepool Tracker</string>
 	<!-- Options -->
 	<string name="interface_cleardicepoolondrag_label">Clear Star Wars dice pool on drag</string>
-	<string name="option_header_genesys_house">Star Wars: House Rules (GM)</string>
-
-	<!-- Options -->
+	<string name="option_header_sw_house">Star Wars: House Rules (GM)</string>
 	<string name="option_val_DDCL_sw_core">Star Wars</string>
 
 	<!-- Character Main -->
@@ -38,7 +36,15 @@
 	<!-- Morality  -->
 	<string name="char_label_morality">Morality</string>
 	<string name="morality_label_value">Value</string>
+	<string name="morality_label_conflict">Conflict</string>
+	<string name="morality_label_conflict_triggered">Triggered?</string>
+	<string name="morality_label_conflict_engaged">Engaged?</string>
 
+	<!-- Force Rating -->
+	<string name="char_label_forcerating">Force Rating</string>
+	<string name="char_label_forcerating_total">Total</string>
+	<string name="char_label_forcerating_spent">Spent</string>
+	<string name="char_label_forcerating_remaining">Remaining</string>
 
 	<!-- Item window -->
 	<string name="item_label_compatible_silhouettes">Compatible Silhouettes</string>

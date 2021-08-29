@@ -19,4 +19,9 @@
 	<middle>0,0,480,77</middle>
 </framedef>
 
+<framedef name="force_rating">
+	<bitmap file="graphics/frames/force_rating.png" />
+	<middle>0,0,74,77</middle>
+</framedef>
+
 </root>

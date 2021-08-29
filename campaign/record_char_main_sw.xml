@@ -198,6 +198,172 @@
       </button_iadd>
 
 
+			<sheetlabel name="conflictlabel">
+				<anchored to="moralitytitle" height="20">
+          <top anchor="bottom" relation="relative" offset="5" />
+          <left />
+          <right />
+        </anchored>
+				<static textres="morality_label_conflict" />
+			</sheetlabel>
+			<sheetnumberfield name="morality_conflict" source="morality_conflict.value">
+				<anchored>
+					<to>conflictlabel</to>
+					<offset>83,0</offset>
+					<size>
+						<width>30</width>
+					</size>
+				</anchored>
+			</sheetnumberfield>
+
+
+			<sheetlabel name="conflictlabeltr">
+				<anchored to="morality_conflict" position="right" offset="80" height="20" />
+				<static textres="morality_label_conflict_triggered" />
+			</sheetlabel>
+			<buttongroup_counter name="conflict_triggered">
+				<anchored to="conflictlabeltr" position="right" offset="10" />
+				<sourcefields><current>morality_conflict.triggered</current></sourcefields>
+				<values><maximum>1</maximum></values>
+			</buttongroup_counter>
+
+
+
+			<sheetlabel name="conflictlabelen">
+				<anchored to="conflict_triggered" position="right" offset="80" height="20" />
+				<static textres="morality_label_conflict_engaged" />
+			</sheetlabel>
+			<buttongroup_counter name="conflict_engaged">
+				<anchored to="conflictlabelen" position="right" offset="10" />
+				<sourcefields><current>morality_conflict.engaged</current></sourcefields>
+				<values><maximum>1</maximum></values>
+			</buttongroup_counter>
+
+
+
+
+
+			<label_charframetopg name="forceratingtitle">
+        <anchored to="moralitytitle" height="20">
+          <top anchor="bottom" relation="relative" offset="7" />
+          <left />
+          <right />
+        </anchored>
+        <static textres="char_label_forcerating" />
+      </label_charframetopg>
+
+			<!-- Force rating -->
+			<!-- TOTAL -->
+			<sheetlabel>
+				<anchored>
+					<to>forceratingtitle</to>
+					<offset>13,32</offset>
+					<size>
+						<width>64</width>
+					</size>
+				</anchored>
+				<static textres="char_label_forcerating_total" />
+			</sheetlabel>
+			<sheetnumberfield name="force_rating_total" source="force_rating.total">
+				<anchored>
+					<to>forceratingtitle</to>
+					<offset>83,31</offset>
+					<size>
+						<width>30</width>
+					</size>
+				</anchored>
+			</sheetnumberfield>
+
+			<!-- SPENT -->
+			<sheetlabel>
+				<anchored>
+					<to>forceratingtitle</to>
+					<offset>203,32</offset>
+					<size>
+						<width>64</width>
+					</size>
+				</anchored>
+				<static textres="char_label_forcerating_spent" />
+			</sheetlabel>
+			<sheetnumberfield name="force_rating_spent" source="force_rating.spent">
+				<anchored>
+					<to>forceratingtitle</to>
+					<offset>273,31</offset>
+					<size>
+						<width>30</width>
+					</size>
+				</anchored>
+				<script>
+					local totalnode = nil;
+
+					function onValueChanged()
+						local totalvalue = totalnode.getValue();
+						local value = getValue();
+						if value == 0 then
+							setColor(zerocolor[1]);
+						else
+							setColor(color[1]);
+						end
+						if 0 > value then
+							setValue(0);
+						end
+						if value > totalvalue then
+							setValue(totalvalue);
+						end
+					end
+
+					function onInit()
+						local windownode = window.getDatabaseNode();
+						totalnode = windownode.getChild("force_rating.total");
+						onValueChanged();
+					end
+				</script>
+			</sheetnumberfield>
+
+			<!-- REMAINING -->
+			<sheetlabel>
+				<anchored>
+					<to>forceratingtitle</to>
+					<offset>360,32</offset>
+					<size>
+						<width>64</width>
+					</size>
+				</anchored>
+				<static textres="char_label_forcerating_remaining" />
+			</sheetlabel>
+			<sheetnumbercontrol>
+				<anchored>
+					<to>forceratingtitle</to>
+					<offset>430,31</offset>
+					<size>
+						<width>30</width>
+					</size>
+				</anchored>
+				<disabled />
+				<script>
+					local totalnode = nil;
+					local spentnode = nil;
+
+					function onUpdate(source)
+						local totalvalue = totalnode.getValue();
+						local spentvalue = spentnode.getValue();
+						setValue(totalvalue - spentvalue);
+						onValueChanged();
+					end
+
+					function onInit()
+						local windownode = window.getDatabaseNode();
+						totalnode = windownode.getChild("force_rating.total");
+						totalnode.onUpdate = onUpdate;
+						spentnode = windownode.getChild("force_rating.spent");
+						spentnode.onUpdate = onUpdate;
+						onUpdate(nil);
+						onValueChanged();
+					end
+				</script>
+			</sheetnumbercontrol>
+
+
 		</sheetdata>
 	</windowclass>
 
