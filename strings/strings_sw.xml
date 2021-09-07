@@ -8,7 +8,7 @@
 <root>
 	<string name="dicepool_tracker_window_title">Dicepool Tracker</string>
 	<!-- Options -->
-	<string name="interface_cleardicepoolondrag_label">Clear Star Wars dice pool on drag</string>
+	<string name="interface_cleardicepoolondrag_label">Clear Star Wars dice pool before new action</string>
 	<string name="option_header_sw_house">Star Wars: House Rules (GM)</string>
 	<string name="option_val_DDCL_sw_core">Star Wars</string>
 
@@ -78,6 +78,13 @@
 	<string name ="ct_vehicle_defense_port_tip">Defense Port</string>
 	<string name ="ct_vehicle_defense_starboard_tip">Defense Starboard</string>
 	<string name ="ct_vehicle_defense_aft_tip">Defense Aft</string>
+
+	<!-- Party Sheet -->
+	<string name="ps_label_species_archetype">Species</string>
+	<string name="ps_label_totals">Totals</string>
+	<string name="ps_label_obligation">Obligation</string>
+	<string name="ps_label_duty">Duty</string>
+	<string name="ps_label_morality">Morality</string>
 
 
 

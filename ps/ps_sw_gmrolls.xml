@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+	<windowclass name="ps_gmrolls">
+<!--		<script file="ps/scripts/ps_main.lua" /> -->
+		<sheetdata>
+			<anchor_partysheet_main_header />
+
+			<label_ps name="namelabel">
+				<anchored to="headeranchor" position="insidetopleft" offset="55,0" width="85" />
+				<static textres="ps_label_name" />
+			</label_ps>
+			<label_ps name="specieslabel">
+				<anchored to="headeranchor" position="insidetopleft" offset="150,0" width="85" />
+				<static textres="ps_label_species_archetype" />
+			</label_ps>
+			<label_ps name="careerlabel">
+				<anchored to="headeranchor" position="insidetopleft" offset="55,17" width="180" />
+				<static textres="ps_label_career" />
+			</label_ps>
+			<label_ps name="hplabel">
+				<anchored to="headeranchor" position="insidetopleft" offset="244,0" width="25" />
+				<static textres="ws" />
+				<center />
+			</label_ps>
+			<label_ps name="modifiers_label">
+        <anchored to="headeranchor" position="insidetopleft" offset="60,0" />
+				<anchored to="hplabel" position="righthigh" offset="10,0" />
+				<static textres="ps_label_modifiers" />
+				<center />
+			</label_ps>
+
+      <label_ps name="wt_mod_label">
+        <anchored to="headeranchor" position="insidetopleft" offset="60,0" />
+				<anchored to="hplabel" position="righthigh" offset="14,20" />
+				<static textres="ps_label_wtshort_mod" />
+				<center />
+			</label_ps>
+
+			<label_ps name="st_mod_label">
+        <anchored to="headeranchor" position="insidetopleft" offset="60,0" />
+				<anchored to="hplabel" position="righthigh" offset="47,20" />
+				<static textres="ps_label_stshort_mod" />
+				<center />
+			</label_ps>
+
+
+      <label_ps name="totals_label">
+        <anchored to="headeranchor" position="insidetopleft" offset="60,0" />
+				<anchored to="hplabel" position="righthigh" offset="150,0" />
+				<static textres="ps_label_totals" />
+				<center />
+			</label_ps>
+
+      <label_ps name="wt_mod_label">
+        <anchored to="headeranchor" position="insidetopleft" offset="60,0" />
+				<anchored to="hplabel" position="righthigh" offset="80,20" />
+				<static textres="ps_label_obligation" />
+				<center />
+			</label_ps>
+
+      <label_ps name="wt_mod_label">
+        <anchored to="headeranchor" position="insidetopleft" offset="60,0" />
+				<anchored to="hplabel" position="righthigh" offset="155,20" />
+				<static textres="ps_label_duty" />
+				<center />
+			</label_ps>
+
+      <label_ps name="wt_mod_label">
+        <anchored to="headeranchor" position="insidetopleft" offset="60,0" />
+				<anchored to="hplabel" position="righthigh" offset="200,20" />
+				<static textres="ps_label_morality" />
+				<center />
+			</label_ps>
+
+			<button_iedit name="list_iedit">
+				<anchored to="headeranchor" position="insidebottomright" offset="10,5" />
+				<target>list</target>
+				<gmvisibleonly />
+			</button_iedit>
+
+			<list_gmrolls />
+			<scrollbar_list />
+			<anchor_partysheet_main_footer />
+		</sheetdata>
+	</windowclass>
+
+	<windowclass name="ps_gmrollsitem">
+		<margins control="0,0,0,10" />
+		<frame>partysheetentry</frame>
+		<script file="ps\scripts\ps_gmrolls_list_item.lua" />
+		<sheetdata>
+			<htoken name="token" />
+			<hlink name="link">
+				<script>
+					function onValueChanged()
+						window.portrait.update();
+						window.onLinkChanged();
+					end
+				</script>
+			</hlink>
+			<hnx name="hptotal" />
+			<hnx name="wounds" />
+			<hnx name="hd" />
+			<hnx name="hdused" />
+
+			<portrait_base>
+				<bounds>10,10,40,40</bounds>
+			</portrait_base>
+			<portrait name="portrait">
+				<bounds>10,10,40,40</bounds>
+			</portrait>
+
+			<string_ps name="name">
+				<anchored position="insidetopleft" offset="55,10" width="85" />
+				<empty textres="library_recordtype_empty_charsheet" />
+			</string_ps>
+			<string_ps name="species_archetype">
+				<anchored position="insidetopleft" offset="150,10" width="85" />
+			</string_ps>
+			<string_ps name="career">
+				<anchored position="insidetopleft" offset="55,30" width="180" />
+			</string_ps>
+
+			<progressbar name="hpbar">
+				<anchored position="insidetopleft" offset="245,10" width="10" height="40" />
+				<source><max>wounds_threshold</max><used>wounds_current</used></source>
+				<textprefix><textres>wounds</textres></textprefix>
+				<healthbar />
+			</progressbar>
+			<progressbar name="hdbar">
+				<anchored position="insidetopleft" offset="258,10" width="10" height="40" />
+				<source><max>strain_threshold</max><used>strain_current</used></source>
+				<textprefix><textres>strain</textres></textprefix>
+				<usagebar />
+			</progressbar>
+
+<!--
+
+
+			<number_ps_characteristic_modifier name="brawnmod">
+				<anchored to="brawn" />
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="agilitymod">
+				<anchored to="agility" />
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="intellectmod">
+				<anchored to="intellect" />
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="cunningmod">
+				<anchored to="cunning" />
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="willpowermod">
+				<anchored to="willpower" />
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="presencemod">
+				<anchored to="presence" />
+			</number_ps_characteristic_modifier>
+-->
+<!--
+			<number_ps_characteristic_modifier name="strbonus">
+				<anchored to="strength" />
+				<target>strength</target>
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="conbonus">
+				<anchored to="constitution" />
+				<target>constitution</target>
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="dexbonus">
+				<anchored to="dexterity" />
+				<target>dexterity</target>
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="intbonus">
+				<anchored to="intelligence" />
+				<target>intelligence</target>
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="wisbonus">
+				<anchored to="wisdom" />
+				<target>wisdom</target>
+			</number_ps_characteristic_modifier>
+			<number_ps_characteristic_modifier name="chabonus">
+				<anchored to="presence" />
+				<target>charisma</target>
+			</number_ps_characteristic_modifier>
+-->
+<!--
+			<number_ps_soak name="soak">
+				<anchored to="presence">
+					<left offset="15" />
+				</anchored>
+			</number_ps_soak>
+
+			<number_ps_md name="meleedefence">
+				<anchored to="soak">
+					<left offset="15" />
+				</anchored>
+			</number_ps_md>
+			<number_ps_rd name="rangeddefence">
+				<anchored to="meleedefence" position="belowleft" offset="0,1" />
+			</number_ps_rd>
+
+-->
+			<number_ps_linked_editable name="wtmod">
+				<anchored to="hdbar" position="right" offset="10" width="25" />
+				<color>ff000000</color>
+				<zerocolor>20000000</zerocolor>
+				<nodrag />
+				<nolinkwidget />
+				<displaysign />
+				<tooltip textres="ps_tooltip_modifier_wt_mod"/>
+			</number_ps_linked_editable>
+
+			<number_ps_linked_editable name="stmod">
+				<anchored to="hdbar" position="right" offset="45" width="25" />
+				<color>ff000000</color>
+				<zerocolor>20000000</zerocolor>
+				<nodrag />
+				<nolinkwidget />
+				<displaysign />
+				<tooltip textres="ps_tooltip_modifier_st_mod"/>
+			</number_ps_linked_editable>
+
+      <number_ps_characteristic name="obligationtotal">
+				<anchored to="stmod">
+					<left offset="30" />
+				</anchored>
+        <color>ff000000</color>
+				<zerocolor>20000000</zerocolor>
+  			<script file="common/scripts/number_crosslink_genesys.lua" />
+			</number_ps_characteristic>
+
+      <number_ps_characteristic name="dutytotal">
+				<anchored to="obligationtotal">
+					<left offset="30" />
+				</anchored>
+        <color>ff000000</color>
+				<zerocolor>20000000</zerocolor>
+  			<script file="common/scripts/number_crosslink_genesys.lua" />
+			</number_ps_characteristic>
+
+      <number_ps_characteristic name="moralitytotal">
+				<anchored to="dutytotal">
+					<left offset="30" />
+				</anchored>
+        <color>ff000000</color>
+				<zerocolor>20000000</zerocolor>
+  			<script file="common/scripts/number_crosslink_genesys.lua" />
+			</number_ps_characteristic>
+
+
+
+<!--
+			<string_ps name="specialdefense">
+				<anchored height="20">
+					<top parent="ac" />
+					<left parent="ac" anchor="right" offset="10" />
+					<right offset="-30" />
+				</anchored>
+				<tooltip textres="ps_tooltip_specialdef" />
+			</string_ps>
+			<string_ps name="senses">
+				<anchored to="specialdefense" position="below" offset="0,1" height="20" />
+				<tooltip textres="ps_tooltip_specialdef" />
+			</string_ps>
+-->
+			<button_idelete name="idelete">
+				<anchored position="insidetopright" offset="10,10" />
+			</button_idelete>
+		</sheetdata>
+	</windowclass>
+
+  <template name="list_gmrolls">
+		<list_psmain_helper name="list">
+			<anchored to="headeranchor">
+				<top anchor="bottom" />
+				<left />
+				<right />
+				<bottom parent="" offset="5" />
+			</anchored>
+			<datasource>.partyinformation</datasource>
+			<class>ps_gmrollsitem</class>
+			<sortby><control>name</control></sortby>
+			<allowdelete />
+			<empty font="list-empty-ps" textres="ps_emptylist" />
+		</list_psmain_helper>
+	</template>
+</root>

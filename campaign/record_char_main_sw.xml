@@ -140,6 +140,22 @@
           <left />
           <right />
         </anchored>
+				<script>
+					function onInit()
+						onValueChanged();
+						local node = getDatabaseNode();
+						DB.addHandler(DB.getPath(node, "*.value"), "onUpdate", onValueChanged);
+						DB.addHandler(DB.getPath(node), "onChildDeleted", onValueChanged);
+					end
+					function onValueChanged()
+						CharManager.updateListTotal(window.getDatabaseNode(), "obligation", "obligation_total", "value");
+					end
+					function onClose()
+						local node = getDatabaseNode();
+						DB.removeHandler(DB.getPath(node, "*.value"), "onUpdate", onValueChanged);
+						DB.removeHandler(DB.getPath(node), "onChildDeleted", onValueChanged);
+					end
+				</script>
         <datasource>.obligation</datasource>
         <class>obligation_item</class>
         <listheader>obligationtitle</listheader>
@@ -164,6 +180,22 @@
           <left />
           <right />
         </anchored>
+				<script>
+					function onInit()
+						onValueChanged();
+						local node = getDatabaseNode();
+						DB.addHandler(DB.getPath(node, "*.value"), "onUpdate", onValueChanged);
+						DB.addHandler(DB.getPath(node), "onChildDeleted", onValueChanged);
+					end
+					function onValueChanged()
+						CharManager.updateListTotal(window.getDatabaseNode(), "duty", "duty_total", "value");
+					end
+					function onClose()
+						local node = getDatabaseNode();
+						DB.removeHandler(DB.getPath(node, "*.value"), "onUpdate", onValueChanged);
+						DB.removeHandler(DB.getPath(node), "onChildDeleted", onValueChanged);
+					end
+				</script>
         <datasource>.duty</datasource>
         <class>duty_item</class>
         <listheader>dutytitle</listheader>
@@ -188,6 +220,22 @@
           <left />
           <right />
         </anchored>
+				<script>
+					function onInit()
+						onValueChanged();
+						local node = getDatabaseNode();
+						DB.addHandler(DB.getPath(node, "*.value"), "onUpdate", onValueChanged);
+						DB.addHandler(DB.getPath(node), "onChildDeleted", onValueChanged);
+					end
+					function onValueChanged()
+						CharManager.updateListTotal(window.getDatabaseNode(), "morality", "morality_total", "value");
+					end
+					function onClose()
+						local node = getDatabaseNode();
+						DB.removeHandler(DB.getPath(node, "*.value"), "onUpdate", onValueChanged);
+						DB.removeHandler(DB.getPath(node), "onChildDeleted", onValueChanged);
+					end
+				</script>
         <datasource>.morality</datasource>
         <class>morality_item</class>
         <listheader>moralitytitle</listheader>
@@ -218,11 +266,11 @@
 
 
 			<sheetlabel name="conflictlabeltr">
-				<anchored to="morality_conflict" position="right" offset="80" height="20" />
+				<anchored to="morality_conflict" position="right" offset="120" height="20" />
 				<static textres="morality_label_conflict_triggered" />
 			</sheetlabel>
 			<buttongroup_counter name="conflict_triggered">
-				<anchored to="conflictlabeltr" position="right" offset="10" />
+				<anchored to="conflictlabeltr" position="right" offset="12" />
 				<sourcefields><current>morality_conflict.triggered</current></sourcefields>
 				<values><maximum>1</maximum></values>
 			</buttongroup_counter>
@@ -234,7 +282,7 @@
 				<static textres="morality_label_conflict_engaged" />
 			</sheetlabel>
 			<buttongroup_counter name="conflict_engaged">
-				<anchored to="conflictlabelen" position="right" offset="10" />
+				<anchored to="conflictlabelen" position="right" offset="17" />
 				<sourcefields><current>morality_conflict.engaged</current></sourcefields>
 				<values><maximum>1</maximum></values>
 			</buttongroup_counter>
