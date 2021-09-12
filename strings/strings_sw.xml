@@ -85,7 +85,16 @@
 	<string name="ps_label_obligation">Obligation</string>
 	<string name="ps_label_duty">Duty</string>
 	<string name="ps_label_morality">Morality</string>
+	<string name="ps_emptylistobligation">Click the rebuild button above to generate/rebuild Obligation list.</string>
+	<string name="ps_label_totals">Totals</string>
+	<string name="ps_label_totals_obligation">O</string>
+	<string name="ps_label_totals_duty">D</string>
+	<string name="ps_label_totals_morality">M</string>
 
+	<string name="ps_label_table_obligation">Obligation Table</string>
+	<string name="ps_label_table_duty">Duty Table</string>
+	<string name="ps_tooltip_rebuild_obligation_table">Rebuild Obligation Table</string>
+	<string name="ps_tooltip_rebuild_duty_table">Rebuild Duty Table</string>
 
 
 	<!-- instead of setting, we use the field to represent from which book the record came from, as Source -->

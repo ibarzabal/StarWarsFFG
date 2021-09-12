@@ -8,7 +8,7 @@
 <root version="3.0" release="4.1" logo="logo.png">
 
 
-	<announcement text="Star Wars RPG (version 2021-09-07)\nA community ruleset for FG Classic and FG Unity\nDeveloped by John Ibarzabal (a.k.a. Mestre dos Magos), and Sevrick.\r\rStar Wars RPG (c) by Fantasy Flight Games. All rights reserved.\r\rThis ruleset is a community project developed for no monetary gain and with the understanding that game mechanics are not protected by US Copyright laws.\rAs such, no literary work (which is covered by US Copyright) has been included in this ruleset."  font="emotefont" icon="rulesetlogo_SWRPG" />
+	<announcement text="Star Wars RPG (version 2021-09-12)\nA community ruleset for FG Classic and FG Unity\nDeveloped by John Ibarzabal (a.k.a. Mestre dos Magos), and Sevrick.\r\rStar Wars RPG (c) by Fantasy Flight Games. All rights reserved.\r\rThis ruleset is a community project developed for no monetary gain and with the understanding that game mechanics are not protected by US Copyright laws.\rAs such, no literary work (which is covered by US Copyright) has been included in this ruleset."  font="emotefont" icon="rulesetlogo_SWRPG" />
 
 
 
@@ -71,4 +71,7 @@
 	<!-- <includefile source="ps/template_ps.xml" /> -->
 	<includefile source="ps/ps.xml" />
 	<includefile source="ps/ps_sw_gmrolls.xml" />
+	<!-- <script name="ActionGMRoll" file="scripts/manager_gmrolls.lua" />-->
+
+
 </root>
