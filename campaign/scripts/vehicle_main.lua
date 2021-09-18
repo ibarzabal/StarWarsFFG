@@ -50,8 +50,8 @@ function update()
 	updateControl("encumbrance_capacity_notes", bReadOnly, bID);
 	updateControl("consumables", bReadOnly, bID);
 	updateControl("hard_points", bReadOnly, bID);
-	updateControl("notes", bReadOnly, bID);
-	updateControl("additional_rules", bReadOnly, bID);
+	updateControl("description", bReadOnly, bID);
+	--updateControl("additional_rules", bReadOnly, bID);
 	updateControl("source", bReadOnly, bID);
 	updateControl("source_page", bReadOnly, bID);
   main_statblock1_silhouette.setReadOnly(bReadOnly);

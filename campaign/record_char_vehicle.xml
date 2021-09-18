@@ -523,6 +523,7 @@
 
 			<line_column name="divider" />
 
+<!--
 			<label_column name="additional_rules_label">
 				<static textres="vehicle_label_additional_rules" />
 			</label_column>
@@ -534,9 +535,9 @@
 				<readonly />
 				<nolinkwidget />
 			</ft_columnh_linked>
+-->
 
-
-			<ft_columnh_linked name="notes" source = ".temp_vehicle.notes" >
+			<ft_columnh_linked name="description" source = ".temp_vehicle.description" >
 				<readonly />
 				<nolinkwidget />
 			</ft_columnh_linked>

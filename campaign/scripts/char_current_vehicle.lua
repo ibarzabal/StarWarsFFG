@@ -134,29 +134,8 @@ function linkPCFields(nodeVehicle)
 	encumbrance_capacity_notes.setLink(nodeVehicle.createChild("encumbrance_capacity_notes","string"));
 	consumables.setLink(nodeVehicle.createChild("consumables","string"));
 	hard_points.setLink(nodeVehicle.createChild("hard_points","number"));
-	additional_rules.setLink(nodeVehicle.createChild("additional_rules","string"));
-	notes.setLink(nodeVehicle.createChild("notes","string"));
-
-
-
---	updateControl("owner", bReadOnly, bID);
---	updateControl("name", bReadOnly, bID);
---	updateControl("type", bReadOnly, bID);
---	updateControl("manufacturer", bReadOnly, bID);
---	updateControl("maximum_altitude", bReadOnly, bID);
---	updateControl("hyperdrive", bReadOnly, bID);
---	updateControl("navicomputer", bReadOnly, bID);
---	updateControl("sensor_range", bReadOnly, bID);
---	updateControl("control_skill", bReadOnly, bID);
---	updateControl("compliment", bReadOnly, bID);
---	updateControl("starfighter_complement", bReadOnly, bID);
---	updateControl("vehicle_complement", bReadOnly, bID);
---	updateControl("passenger_capacity", bReadOnly, bID);
---	updateControl("encumbrance_capacity", bReadOnly, bID);
---	updateControl("consumables", bReadOnly, bID);
---	updateControl("hard_points", bReadOnly, bID);
---	updateControl("additional_rules", bReadOnly, bID);
---	updateControl("notes", bReadOnly, bID);
+	--additional_rules.setLink(nodeVehicle.createChild("additional_rules","string"));
+	description.setLink(nodeVehicle.createChild("description","string"));
 
 
 	if getDatabaseNode() then

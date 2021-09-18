@@ -63,6 +63,9 @@
 			<string_record_name name="name">
 				<empty textres="library_recordtype_empty_talent" />
 			</string_record_name>
+			<label_recordtype name="recordtype">
+				<static textres="record_label_talent" />
+			</label_recordtype>
 		</sheetdata>
 	</windowclass>
 

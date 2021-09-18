@@ -466,7 +466,7 @@
 
 
 			<line_column name="divider" />
-
+<!--
 			<label_column name="additional_rules_label">
 				<static textres="vehicle_label_additional_rules" />
 			</label_column>
@@ -476,9 +476,9 @@
 					<left offset="135" />
 				</anchored>
 			</ft_columnh>
+-->
 
-
-			<ft_columnh name="notes" />
+			<ft_columnh name="description" />
 
 			<label_column name="source_label">
 				<static textres="label_source" />
@@ -1051,6 +1051,7 @@
 
 			<line_column name="divider" />
 
+<!--
 			<label_column name="additional_rules_label">
 				<static textres="vehicle_label_additional_rules" />
 			</label_column>
@@ -1060,8 +1061,8 @@
 					<left offset="135" />
 				</anchored>
 			</ft_columnh>
-
-			<ft_columnh name="notes" />
+-->
+			<ft_columnh name="description" />
 
 			<label_column name="source_label">
 				<static textres="label_source" />
