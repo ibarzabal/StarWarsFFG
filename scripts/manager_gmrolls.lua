@@ -10,7 +10,6 @@ end
 
 function performGMRoll(draginfo, rActor)
   local rRoll = getRoll(rActor, sCheck);
-  Debug.chat("performGMRoll");
 	rRoll.aDice = { "d100" };
   rRoll.bSecret = true;
   rRoll.bTower = true;
@@ -203,7 +202,6 @@ function modRoll(rSource, rTarget, rRoll)
 end
 
 function onRoll(rSource, rTarget, rRoll)
-  Debug.chat("onRoll");
 	ActionsManager2.decodeAdvantage(rRoll);
 
 	local rMessage = ActionsManager.createActionMessage(rSource, rRoll);

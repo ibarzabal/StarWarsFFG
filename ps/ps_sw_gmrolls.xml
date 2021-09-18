@@ -10,7 +10,9 @@
 		<sheetdata>
 			<windowlist name="list_obligation">
 				<anchored position="insidetopleft" offset="5,45" width="355">
+					<right anchor="center" offset="-15" />
 					<bottom offset="-30" />
+					<!-- <bottom anchor="center" offset="-15" /> -->
 				</anchored>
 				<frame name="groupbox" offset="5,10,15,10" />
 				<datasource>.obligationlist</datasource>
@@ -52,7 +54,7 @@
 				<gmvisibleonly />
 				<script>
 					function onButtonPress()
-						PartyManager2.buildPartyGMRoll("obligationlist", "obligationtotal", false);
+						PartyManager2.buildPartyGMRoll("obligationlist", "obligation_total", false);
 					end
 				</script>
 			</buttoncontrol>
@@ -115,7 +117,8 @@
 			<!-- DUTY ROLL -->
 			<windowlist name="list_duty">
 				<anchored position="insidetopright" offset="10,45">
-					<left offset="385" />
+					<left anchor="center" offset="15" />
+					<!--<left offset="385" /> -->
 					<bottom offset="-30" />
 				</anchored>
 			  <frame name="groupbox" offset="5,10,15,10" />
@@ -138,7 +141,7 @@
 			  <gmvisibleonly />
 			  <script>
 			    function onButtonPress()
-			      PartyManager2.buildPartyGMRoll("dutylist", "dutytotal", false);
+			      PartyManager2.buildPartyGMRoll("dutylist", "duty_total", false);
 			    end
 			  </script>
 			</buttoncontrol>
@@ -261,7 +264,6 @@
 				</anchored>
         <color>ff000000</color>
 				<zerocolor>20000000</zerocolor>
-  			<script file="common/scripts/number_crosslink_genesys.lua" />
 			</number_ps_characteristic>
 
       <number_ps_characteristic name="dutytotal">
@@ -270,7 +272,6 @@
 				</anchored>
         <color>ff000000</color>
 				<zerocolor>20000000</zerocolor>
-  			<script file="common/scripts/number_crosslink_genesys.lua" />
 			</number_ps_characteristic>
 
       <number_ps_characteristic name="moralitytotal">
@@ -279,7 +280,6 @@
 				</anchored>
         <color>ff000000</color>
 				<zerocolor>20000000</zerocolor>
-  			<script file="common/scripts/number_crosslink_genesys.lua" />
 			</number_ps_characteristic>
 
 			<label name="label_roll">

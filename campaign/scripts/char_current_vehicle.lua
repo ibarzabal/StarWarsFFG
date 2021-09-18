@@ -61,7 +61,6 @@ end
 --end
 
 function updateControl(sControl, bReadOnly, bID)
-	Debug.chat(sControl);
 	if not self[sControl] then
 		return false;
 	end

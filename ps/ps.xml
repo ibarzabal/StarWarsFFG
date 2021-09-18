@@ -9,10 +9,10 @@
 	<windowclass name="partysheet_host">
 		<frame>partysheet</frame>
 		<placement>
-			<size width="800" height="500" />
+			<size width="850" height="500" />
 		</placement>
 		<sizelimits>
-			<minimum width="800" height="500" />
+			<minimum width="850" height="500" />
 			<dynamic />
 		</sizelimits>
 		<softclose />
