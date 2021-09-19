@@ -2,6 +2,7 @@
 -- Please see the license.html file included with this distribution for
 -- attribution and copyright information.
 --
+local node, current_vehicle, current_vehicle_node;
 
 function onInit()
 	onLinkChanged();
@@ -9,56 +10,60 @@ end
 
 
 function onClose()
-	local node = getDatabaseNode();
-	local current_vehicle, current_vehicle_node = DBManagerGenesys.ActorVehicle(node);
 	DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildAdded", onListsUpdated);
 	DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildDeleted", onListsUpdated);
 	DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildUpdate", onListsUpdated);
 end
 
 function onListsUpdated()
-	local node = getDatabaseNode();
-	local current_vehicle, current_vehicle_node = DBManagerGenesys.ActorVehicle(node);
-	if current_vehicle_node and current_vehicle ~=""  then
-		linkPCFields(current_vehicle_node);
+	onClose();
+	if getDatabaseNode() then
+		local temp_node = getDatabaseNode().createChild("temp_vehicle");
+		local temp_w_node = temp_node.createChild("weapons");
+		local temp_a_node = temp_node.createChild("attachments");
+		local temp_c_node = temp_node.createChild("critical_damage");
+		local weaponsnode = DB.getChild(nodeVehicle,"weapons");
+		local attachmentsnode = DB.getChild(nodeVehicle,"attachments");
+		local criticalsnode = DB.getChild(nodeVehicle,"critical_damage");
+
+		if temp_w_node then
+			DB.deleteChildren(DB.getPath(temp_w_node));
+		end
+		if temp_a_node then
+			DB.deleteChildren(DB.getPath(temp_a_node));
+		end
+		if temp_c_node then
+			DB.deleteChildren(DB.getPath(temp_c_node));
+		end
+
+		if weaponsnode and temp_w_node then
+			DBManagerGenesys.copyNode(weaponsnode, temp_w_node);
+		end
+		if attachmentsnode and temp_a_node then
+			DBManagerGenesys.copyNode(attachmentsnode, temp_a_node);
+		end
+		if criticalsnode and temp_c_node then
+			DBManagerGenesys.copyNode(criticalsnode, temp_c_node);
+		end
 	end
+	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildAdded", onListsUpdated);
+	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildDeleted", onListsUpdated);
+	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildUpdate", onListsUpdated);
 end
 
 function onLinkChanged()
-	local node = getDatabaseNode();
-	local current_vehicle, current_vehicle_node = DBManagerGenesys.ActorVehicle(node);
-
 	onClose(); -- If there are handlers from a previous vehicle, remove...
+	node = getDatabaseNode();
+	current_vehicle, current_vehicle_node = DBManagerGenesys.ActorVehicle(node);
+
 	if current_vehicle_node  and current_vehicle ~="" then
 		parentcontrol.window.contents.setVisible(true);
 		linkPCFields(current_vehicle_node);
-		DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildAdded", onListsUpdated);
-		DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildDeleted", onListsUpdated);
-		DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildUpdate", onListsUpdated);
+		onListsUpdated();
 	else
 		parentcontrol.window.contents.setVisible(false);
 	end
 end
-
-
-function updateControl(sControl, bReadOnly, bID)
-	if not self[sControl] then
-		return false;
-	end
-
-	if not bID then
-		return self[sControl].update(bReadOnly, true);
-	end
-
-	return self[sControl].update(bReadOnly);
-end
-
-
---function updateControl(sControl, bReadOnly, bID)
---	if not self[sControl] then
---		return false;
---	end
---end
 
 function updateControl(sControl, bReadOnly, bID)
 	if not self[sControl] then
@@ -136,37 +141,6 @@ function linkPCFields(nodeVehicle)
 	hard_points.setLink(nodeVehicle.createChild("hard_points","number"));
 	--additional_rules.setLink(nodeVehicle.createChild("additional_rules","string"));
 	description.setLink(nodeVehicle.createChild("description","string"));
-
-
-	if getDatabaseNode() then
-		local temp_node = getDatabaseNode().createChild("temp_vehicle");
-		local temp_w_node = temp_node.createChild("weapons");
-		local temp_a_node = temp_node.createChild("attachments");
-		local temp_c_node = temp_node.createChild("critical_damage");
-		local weaponsnode = DB.getChild(nodeVehicle,"weapons");
-		local attachmentsnode = DB.getChild(nodeVehicle,"attachments");
-		local criticalsnode = DB.getChild(nodeVehicle,"critical_damage");
-
-		if temp_w_node then
-			DB.deleteChildren(DB.getPath(temp_w_node));
-		end
-		if temp_a_node then
-			DB.deleteChildren(DB.getPath(temp_a_node));
-		end
-		if temp_c_node then
-			DB.deleteChildren(DB.getPath(temp_c_node));
-		end
-
-		if weaponsnode and temp_w_node then
-			DBManagerGenesys.copyNode(weaponsnode, temp_w_node);
-		end
-		if attachmentsnode and temp_a_node then
-			DBManagerGenesys.copyNode(attachmentsnode, temp_a_node);
-		end
-		if criticalsnode and temp_c_node then
-			DBManagerGenesys.copyNode(criticalsnode, temp_c_node);
-		end
-	end
 end
 
 function updateVisibilityDefSlots()
