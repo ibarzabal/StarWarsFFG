@@ -19,4 +19,8 @@
 	<icon name="dProficiency" file="graphics/icons/dProficiency.png" />
 	<icon name="dChallenge" file="graphics/icons/dChallenge.png" />
 	<icon name="dForce" file="graphics/icons/dForce.png" />
+
+	<!-- Dice Symbols Help Window -->
+	<icon name="dice_symbols_help_img" file="graphics/decals/dice_symbols_sw_help.png" />
+
 </root>
