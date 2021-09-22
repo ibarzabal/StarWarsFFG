@@ -48,7 +48,7 @@
 	<string name="char_label_forcerating_remaining">Remaining</string>
 
 	<!-- Item window -->
-	<string name="item_label_compatible_silhouettes">Compatible Silhouettes</string>
+	<string name="item_label_compatible_silhouettes">Compat. Silhouettes</string>
 
 	<!-- Item Attachment window  -->
 	<string name="item_attachment_modifiers_label">Base Modifiers</string>
