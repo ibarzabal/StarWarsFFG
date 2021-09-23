@@ -348,9 +348,17 @@
 						local totalvalue = totalnode.getValue();
 						local value = getValue();
 						if value == 0 then
-							setColor(zerocolor[1]);
+							if zerocolor then
+								setColor(zerocolor[1]);
+							else
+								setColor("");
+							end
 						else
-							setColor(color[1]);
+							if color then
+								setColor(color[1]);
+							else
+								setColor("");
+							end
 						end
 						if 0 > value then
 							setValue(0);

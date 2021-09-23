@@ -454,7 +454,6 @@
 
 			<number_ps_linked_editable name="wtmod">
 				<anchored to="meleedefence" position="right" offset="30" width="25" />
-				<color>ff000000</color>
 				<zerocolor>20000000</zerocolor>
 				<nodrag />
 				<nolinkwidget />
@@ -464,7 +463,6 @@
 
 			<number_ps_linked_editable name="stmod">
 				<anchored to="rangeddefence" position="right" offset="30" width="25" />
-				<color>ff000000</color>
 				<zerocolor>20000000</zerocolor>
 				<nodrag />
 				<nolinkwidget />
@@ -477,7 +475,6 @@
 				<anchored to="wtmod">
 					<left offset="36" />
 				</anchored>
-        <color>ff000000</color>
 				<zerocolor>20000000</zerocolor>
   			<script file="common/scripts/number_crosslink_genesys.lua" />
 			</number_ps_characteristic>
@@ -486,7 +483,6 @@
 				<anchored to="obligationtotal_main">
 					<left offset="12" />
 				</anchored>
-        <color>ff000000</color>
 				<zerocolor>20000000</zerocolor>
   			<script file="common/scripts/number_crosslink_genesys.lua" />
 			</number_ps_characteristic>
@@ -495,7 +491,6 @@
 				<anchored to="dutytotal_main">
 					<left offset="12" />
 				</anchored>
-        <color>ff000000</color>
 				<zerocolor>20000000</zerocolor>
   			<script file="common/scripts/number_crosslink_genesys.lua" />
 			</number_ps_characteristic>
