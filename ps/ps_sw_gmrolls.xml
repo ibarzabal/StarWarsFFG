@@ -245,6 +245,8 @@
 				<nolinkwidget />
 				<displaysign />
 				<tooltip textres="ps_tooltip_modifier_wt_mod"/>
+				<min>-10</min>
+				<max>10</max>
 			</number_ps_linked_editable>
 
 			<number_ps_linked_editable name="stmod">
@@ -254,6 +256,8 @@
 				<nolinkwidget />
 				<displaysign />
 				<tooltip textres="ps_tooltip_modifier_st_mod"/>
+				<min>-10</min>
+				<max>10</max>
 			</number_ps_linked_editable>
 
       <number_ps_characteristic name="obligationtotal">
