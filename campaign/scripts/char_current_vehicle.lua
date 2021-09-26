@@ -22,9 +22,9 @@ function onListsUpdated()
 		local temp_w_node = temp_node.createChild("weapons");
 		local temp_a_node = temp_node.createChild("attachments");
 		local temp_c_node = temp_node.createChild("critical_damage");
-		local weaponsnode = DB.getChild(nodeVehicle,"weapons");
-		local attachmentsnode = DB.getChild(nodeVehicle,"attachments");
-		local criticalsnode = DB.getChild(nodeVehicle,"critical_damage");
+		local weaponsnode = DB.getChild(current_vehicle_node,"weapons");
+		local attachmentsnode = DB.getChild(current_vehicle_node,"attachments");
+		local criticalsnode = DB.getChild(current_vehicle_node,"critical_damage");
 
 		if temp_w_node then
 			DB.deleteChildren(DB.getPath(temp_w_node));
