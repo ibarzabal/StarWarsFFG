@@ -9,12 +9,10 @@
 <root>
 	<!-- Default fonts - REQUIRED -->
 	<font name="defaultstringcontrol">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#000000" />
 	</font>
 	<font name="defaultnumbercontrol">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#000000" />
 	</font>
@@ -22,29 +20,24 @@
 
 	<!-- Chat fonts - REQUIRED -->
 	<font name="chatfont">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#261A12" />
 	</font>
 	<font name="emotefont">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#880000" />
 	</font>
 	<font name="msgfont">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#660066" />
 	</font>
 	<font name="oocfont">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#005500" />
 	</font>
 
 	<!-- Chat fonts -->
 	<font name="chatnpcfont">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#000066" />
 	</font>
@@ -53,24 +46,20 @@
 	<!-- Standard text fields -->
 
 	<font name="sheettext">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#000000" />
 	</font>
 
 	<!-- Tables -->
 	<font name="tablerange">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#000000" />
 	</font>
 	<font name="tableheader">
-		<fgffile name="graphics/fonts/SW-Bold.fgf" />
 		<ttf file="graphics/fonts/SW-Bold.ttf" name="StarWars Bold" size="16" />
 		<color value="#000000" />
 	</font>
 	<font name="tabledata">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#000000" />
 	</font>
@@ -78,35 +67,29 @@
 
 	<!-- Formatted text fields -->
 	<font name="reference-h">
-		<fgffile name="graphics/fonts/SW-bold-14.fgf" />
 		<ttf file="graphics/fonts/SW-Bold.ttf" name="StarWars Bold" size="24" />
 		<color value="660000" />
 	</font>
 
 	<font name="reference-r">
-		<fgffile name="graphics/fonts/SW-Regular.fgf" />
 		<ttf file="graphics/fonts/SW-Regular.ttf" name="StarWars Regular" size="16" />
 		<color value="#000000" />
 	</font>
 
 <font name="reference-i">
-	<fgffile name="graphics/fonts/SW-Italic.fgf" />
 	<ttf file="graphics/fonts/SW-Italic.ttf" name="StarWars Italic" size="16" />
 	<color value="#000000" />
 </font>
 
 <font name="reference-b">
-	<fgffile name="graphics/fonts/SW-Bold.fgf" />
 	<ttf file="graphics/fonts/SW-Bold.ttf" name="StarWars Bold" size="16" />
 	<color value="#000000" />
 </font>
 <font name="reference-bi">
-	<fgffile name="graphics/fonts/SW-BoldItalic.fgf" />
 	<ttf file="graphics/fonts/SW-BoldItalic.ttf" name="StarWars Bold Italic" size="16" />
 	<color value="#000000" />
 </font>
 <font name="reference-b-large">
-	<fgffile name="graphics/fonts/SW-Bold-b.fgf" />
 	<ttf file="graphics/fonts/SW-Bold.ttf" name="StarWars Bold" size="18" />
 	<color value="#000000" />
 </font>
