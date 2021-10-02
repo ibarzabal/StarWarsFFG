@@ -56,7 +56,7 @@
 		<color value="#000000" />
 	</font>
 	<font name="tableheader">
-		<ttf file="graphics/fonts/SW-Bold.ttf" name="StarWars Bold" size="16" />
+		<ttf file="graphics/fonts/SW-Black.ttf" name="SW Black" size="16" />
 		<color value="#000000" />
 	</font>
 	<font name="tabledata">
@@ -67,7 +67,7 @@
 
 	<!-- Formatted text fields -->
 	<font name="reference-h">
-		<ttf file="graphics/fonts/SW-Bold.ttf" name="StarWars Bold" size="24" />
+		<ttf file="graphics/fonts/SW-Black.ttf" name="SW Black" size="24" />
 		<color value="660000" />
 	</font>
 
@@ -82,15 +82,15 @@
 </font>
 
 <font name="reference-b">
-	<ttf file="graphics/fonts/SW-Bold.ttf" name="StarWars Bold" size="16" />
+	<ttf file="graphics/fonts/SW-Black.ttf" name="SW Black" size="16" />
 	<color value="#000000" />
 </font>
 <font name="reference-bi">
-	<ttf file="graphics/fonts/SW-BoldItalic.ttf" name="StarWars Bold Italic" size="16" />
+	<ttf file="graphics/fonts/SW-BlackItalic.ttf" name="StarWars Black Italic" size="16" />
 	<color value="#000000" />
 </font>
 <font name="reference-b-large">
-	<ttf file="graphics/fonts/SW-Bold.ttf" name="StarWars Bold" size="18" />
+	<ttf file="graphics/fonts/SW-Black.ttf" name="SW Black" size="18" />
 	<color value="#000000" />
 </font>
 
