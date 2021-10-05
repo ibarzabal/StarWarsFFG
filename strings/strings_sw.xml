@@ -12,6 +12,17 @@
 	<string name="option_header_sw_house">Star Wars: House Rules (GM)</string>
 	<string name="option_val_DDCL_sw_core">Star Wars</string>
 
+	<!-- DicePool -->
+	<string name="tooltip_storypointpc">Light Side Destiny Point Token (drag off to remove)</string>
+	<string name="tooltip_storypointgm">Dark Side Destiny Point Token(drag off to remove)</string>
+
+	<string name="storypoint_player_user_by_user">A Light Side Destiny Point has been used by '%s'.</string>
+	<string name="storypoint_player_played_by_gm">A Light Side Destiny Point has been played by the GM on behalf of the players.</string>
+	<string name="storypoint_player_user_by_user_for_character">A Light Side Destiny Point has been used by '%s', for character '%s'.</string>
+	<string name="storypoint_player_decremented">Light Side Destiny Points has been decremented to '%s'.</string>
+	<string name="storypoint_gm_used">A Dark Side Destiny Point has been used by the GM.</string>
+
+
 	<!-- Character Main -->
 	<string name="char_message_species_archetypeadd">Species '%s' added to '%s'.</string>
 

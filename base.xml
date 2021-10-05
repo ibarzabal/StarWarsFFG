@@ -8,7 +8,7 @@
 <root version="3.0" release="4.1" logo="logo.png">
 
 
-	<announcement text="Star Wars RPG (version 2021-10-03)\nA community ruleset for FG Classic and FG Unity\nDeveloped by John Ibarzabal (a.k.a. Mestre dos Magos), and Sevrick.\r\rStar Wars RPG (c) by Fantasy Flight Games. All rights reserved.\r\rThis ruleset is a community project developed for no monetary gain and with the understanding that game mechanics are not protected by US Copyright laws.\rAs such, no literary work (which is covered by US Copyright) has been included in this ruleset."  font="emotefont" icon="rulesetlogo_SWRPG" />
+	<announcement text="Star Wars RPG (version 2021-10-04)\nA community ruleset for FG Classic and FG Unity\nDeveloped by John Ibarzabal (a.k.a. Mestre dos Magos), and Sevrick.\r\rStar Wars RPG (c) by Fantasy Flight Games. All rights reserved.\r\rThis ruleset is a community project developed for no monetary gain and with the understanding that game mechanics are not protected by US Copyright laws.\rAs such, no literary work (which is covered by US Copyright) has been included in this ruleset."  font="emotefont" icon="rulesetlogo_SWRPG" />
 
 
 
@@ -31,10 +31,9 @@
 	<includefile source="graphics/graphics_fonts_sw.xml" />
 	<includefile source="graphics/graphics_frames_sw.xml" />
 
-
-
 	<!-- Add Force Die to diebox -->
 	<includefile source="definitions/desktop_sw.xml" />
+	<includefile source="common/template_common_sw.xml" />
 
 
 	<!-- Desktop -->

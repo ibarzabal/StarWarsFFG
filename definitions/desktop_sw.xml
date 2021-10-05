@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <root>
 
-	<panel name="dForce">
-		<class>dForce</class>
+	<panel name="NarrativeDice" modes="host,client">
+		<class>NarrativeDice</class>
 		<bounds>
-			<rect>367,-167,55,55</rect>
+			<rect>19,-167,430,55</rect>
 		</bounds>
+		<dynamic />
+		<locked />
 	</panel>
-
 </root>
