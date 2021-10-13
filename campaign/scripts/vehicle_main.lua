@@ -53,7 +53,6 @@ function update()
 	updateControl("description", bReadOnly, bID);
 	--updateControl("additional_rules", bReadOnly, bID);
 	updateControl("source", bReadOnly, bID);
-	updateControl("source_page", bReadOnly, bID);
   main_statblock1_silhouette.setReadOnly(bReadOnly);
 	main_statblock1_speed.setReadOnly(bReadOnly);
 	main_statblock1_handling.setReadOnly(bReadOnly);
@@ -72,6 +71,8 @@ function update()
 		attachments_iadd.setVisible(false);
 		weapons_iedit.setVisible(false);
 		weapons_iadd.setVisible(false);
+		button_attachments.setVisible(false);
+		button_items.setVisible(false);
 		defense_fore_disabled.setVisible(false);
 		defense_port_disabled.setVisible(false);
 		defense_starboard_disabled.setVisible(false);
@@ -85,6 +86,8 @@ function update()
 		attachments_iadd.setVisible(true);
 		weapons_iadd.setVisible(true);
 		weapons_iedit.setVisible(true);
+		button_attachments.setVisible(true);
+		button_items.setVisible(true);
 		defense_fore_disabled.setVisible(true);
 		defense_port_disabled.setVisible(true);
 		defense_starboard_disabled.setVisible(true);

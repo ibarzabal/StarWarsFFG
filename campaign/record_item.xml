@@ -180,6 +180,10 @@
 				<static textres="item_header_attachments"/>
 				<center />
 			</header_column>
+			<button_dblink name="button_attachments">
+				<anchored to="attachments_header" position="insidetopleft" offset="-8,0" />
+				<target>item_attachment</target>
+			</button_dblink>
 			<button_iedit name="attachments_iedit">
 				<anchored to="attachments_header" position="righthigh" offset="-20,0" />
 				<target>attachments</target>
@@ -200,19 +204,7 @@
 			<label_column name="source_label">
 				<static textres="label_source" />
 			</label_column>
-			<string_columnh name="source">
-				<anchored>
-					<right offset="-60" />
-				</anchored>
-			</string_columnh>
-			<number_columnh name="source_page">
-				<anchored width="40" height="20">
-					<left parent="source" anchor="right" offset="14" />
-					<top parent="source" anchor="bottom" offset="-20" />
-				</anchored>
-				<delaykeyupdate />
-			</number_columnh>
-
+			<string_columnh name="source" />
 		</sheetdata>
 	</windowclass>
 

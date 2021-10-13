@@ -49,6 +49,4 @@ function update()
 		updateControl("setting", bReadOnly, bID);
 	end
 	updateControl("source", bReadOnly, bID);
-	updateControl("source_page", bReadOnly, bID);
-
 end
