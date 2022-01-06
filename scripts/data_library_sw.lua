@@ -15,11 +15,20 @@ aRecordOverrides = {
 	},
 };
 
-
-
 function onInit()
+	LibraryData.setCustomFilterHandler("item_isidentified", getItemIsIdentified);
 	for kRecordType,vRecordType in pairs(aRecordOverrides) do
 		LibraryData.overrideRecordTypeInfo(kRecordType, vRecordType);
+	end
+	if ActionsManager.isClientFGU() == false then
+		for kDefSidebar,vDefSidebar in pairs(aDefaultSidebarState) do
+			DesktopManager.setDefaultSidebarState(kDefSidebar, vDefSidebar);
+		end
+		for kRecordType,vRecordListViews in pairs(aListViews) do
+			for kListView, vListView in pairs(vRecordListViews) do
+				LibraryData.setListView(kRecordType, kListView, vListView);
+			end
+		end
 	end
 	LibraryData.setRecordTypeInfo("setting", nil);
 end
