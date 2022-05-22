@@ -29,6 +29,9 @@
 			<sub_ps name="inventory">
 				<class>ps_inventory</class>
 			</sub_ps>
+			<sub_ps name="vehicles">
+				<class>ps_vehicles</class>
+			</sub_ps>
 			<sub_ps name="dicepool">
 				<class>ps_dicepool</class>
 			</sub_ps>
@@ -51,6 +54,10 @@
 				<tab>
 					<icon>tab_inventory</icon>
 					<subwindow>inventory</subwindow>
+				</tab>
+				<tab>
+					<icon>tab_vehicles</icon>
+					<subwindow>vehicles</subwindow>
 				</tab>
 				<tab>
 					<icon>tab_dicepool</icon>
