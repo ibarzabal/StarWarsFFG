@@ -10,9 +10,12 @@ end
 
 
 function onClose()
-	DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildAdded", onListsUpdated);
-	DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildDeleted", onListsUpdated);
-	DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildUpdate", onListsUpdated);
+	current_vehicle, current_vehicle_node = DBManagerGenesys.ActorVehicle(node);
+	if current_vehicle_node ~= nil and current_vehicle ~= nil and current_vehicle ~= "" then
+		DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildAdded", onListsUpdated);
+		DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildDeleted", onListsUpdated);
+		DB.removeHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildUpdate", onListsUpdated);
+	end
 end
 
 function onListsUpdated()
