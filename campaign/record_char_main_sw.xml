@@ -11,89 +11,48 @@
 				</frame_statblock1>
 				<!-- BRAWN -->
 				<sheetcharacteristicvalue name="main_statblock1_brawn_current" source="brawn.current">
-					<anchored to="main_statblock1" offset="20,17"/>
+					<anchored to="main_statblock1" position="insidetopleft" offset="22,15"/>
 				</sheetcharacteristicvalue>
+
 				<title_statblock>
-					<anchored height="20">
-						<top parent="main_statblock1_brawn_current" anchor="bottom" offset="6"/>
-						<left parent="main_statblock1_brawn_current" anchor="left" offset="-20"/>
-						<right parent="main_statblock1_brawn_current" anchor="right" offset="20"/>
-					</anchored>
-					<center />
-					<static>Brawn</static>
+					<anchored name="title_statblock_brawn" to="main_statblock1_brawn_current" position="belowleft" offset="-2,15" height="20" />
 				</title_statblock>
+
 				<!-- AGILITY-->
 				<sheetcharacteristicvalue name="main_statblock1_agility_current" source="agility.current">
-					<anchored>
-						<to>main_statblock1</to>
-						<offset>102,17</offset>
-					</anchored>
+					<anchored to="main_statblock1_brawn_current" position="right" offset="80"/>
 				</sheetcharacteristicvalue>
 				<title_statblock>
-					<anchored>
-						<top parent="main_statblock1_agility_current" anchor="bottom" offset="6"/>
-						<left parent="main_statblock1_agility_current" anchor="left" offset="-20"/>
-						<right parent="main_statblock1_agility_current" anchor="right" offset="20"/>
-						<size height="20" />
-					</anchored>
-					<center />
-					<static>Agility</static>
+					<anchored name="title_statblock_agility" to="main_statblock1_agility_current" position="belowleft" offset="-2,8" height="20" />
 				</title_statblock>
 				<!-- INTELLECT-->
 				<sheetcharacteristicvalue name="main_statblock1_intellect_current" source="intellect.current">
-					<anchored to="main_statblock1" offset="185,17" />
+					<anchored to="main_statblock1_agility_current" position="right" offset="82"/>
 				</sheetcharacteristicvalue>
 				<title_statblock>
-					<anchored>
-						<top parent="main_statblock1_intellect_current" anchor="bottom" offset="6" />
-						<left parent="main_statblock1_intellect_current" anchor="left" offset="-20" />
-						<right parent="main_statblock1_intellect_current" anchor="right" offset="20" />
-						<size height="20" />
-					</anchored>
-					<center />
+					<anchored name="title_statblock_intellect" to="main_statblock1_intellect_current" position="belowleft" offset="-8,8" height="20" />
 					<static>Intellect</static>
 				</title_statblock>
 				<!-- CUNNING-->
 				<sheetcharacteristicvalue name="main_statblock1_cunning_current" source="cunning.current">
-					<anchored to="main_statblock1" offset="264,17" />
+					<anchored to="main_statblock1_intellect_current" position="right" offset="82"/>
 				</sheetcharacteristicvalue>
 				<title_statblock>
-					<anchored>
-						<top parent="main_statblock1_cunning_current" anchor="bottom" offset="6" />
-						<left parent="main_statblock1_cunning_current" anchor="left" offset="-20" />
-						<right parent="main_statblock1_cunning_current" anchor="right" offset="20" />
-						<size height="20" />
-					</anchored>
-					<center />
-					<static>Cunning</static>
+					<anchored name="title_statblock_cunning" to="main_statblock1_cunning_current" position="belowleft" offset="-8,8" height="20" />
 				</title_statblock>
 				<!-- WILLPOWER-->
 				<sheetcharacteristicvalue name="main_statblock1_willpower_current" source="willpower.current">
-					<anchored to="main_statblock1" offset="345,17" />
+					<anchored to="main_statblock1_cunning_current" position="right" offset="82"/>
 				</sheetcharacteristicvalue>
 				<title_statblock>
-					<anchored>
-						<top parent="main_statblock1_willpower_current" anchor="bottom" offset="6" />
-						<left parent="main_statblock1_willpower_current" anchor="left" offset="-20" />
-						<right parent="main_statblock1_willpower_current" anchor="right" offset="20" />
-						<size height="20" />
-					</anchored>
-					<center />
-					<static>Willpower</static>
+					<anchored name="title_statblock_willpower" to="main_statblock1_willpower_current" position="belowleft" offset="-13,8" height="20" />
 				</title_statblock>
 				<!-- PRESENCE-->
 				<sheetcharacteristicvalue name="main_statblock1_presence_current" source="presence.current">
-					<anchored to="main_statblock1" offset="427,17" />
+					<anchored to="main_statblock1_willpower_current" position="right" offset="82"/>
 				</sheetcharacteristicvalue>
 				<title_statblock>
-					<anchored>
-						<top parent="main_statblock1_presence_current" anchor="bottom" offset="6" />
-						<left parent="main_statblock1_presence_current" anchor="left" offset="-20" />
-						<right parent="main_statblock1_presence_current" anchor="right" offset="20" />
-						<size height="20" />
-					</anchored>
-					<center />
-					<static>Presence</static>
+					<anchored name="title_statblock_presence" to="main_statblock1_presence_current" position="belowleft" offset="-8,8" height="20" />
 				</title_statblock>
 
 				<button_iedit name="actions_iedit">
