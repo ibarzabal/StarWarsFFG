@@ -36,6 +36,7 @@
 	<string name="record_label_species_archetype">Species</string>
 	<string name="record_label_racialtrait">Species Trait</string>
 	<string name="talent_label_trees">Trees</string>
+	<string name="talent_force_talent">Force Talent</string>
 
 	<!-- Obligation  -->
 	<string name="char_label_obligation">Obligation</string>
