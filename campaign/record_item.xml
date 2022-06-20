@@ -147,10 +147,6 @@
 				<static textres="item_label_cost" />
 			</label_column>
 			<string_columnh name="cost">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
-				</anchored>
 				<no_symbol_convertion />
 			</string_columnh>
 

@@ -7,7 +7,6 @@
 
 <root>
 	<windowclass name="charsheet_skills" merge="join">
-		<script file="campaign/scripts/char_main.lua" />
 		<sheetdata>
 
       <frame_statblock1 name="main_statblock1">

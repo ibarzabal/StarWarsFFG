@@ -42,6 +42,29 @@
 		<color value="#000066" />
 	</font>
 
+	<!-- Specialization Tree - Summary -->
+	<font name="spec_summary_normal">
+		<ttf file="graphics/fonts/SW-Regular.ttf" name="SW Regular" size="12" />
+		<color value="#000000" />
+	</font>
+	<font name="spec_summary_bold">
+		<ttf file="graphics/fonts/SW-Bold.ttf" name="SW Bold" size="12" />
+		<color value="#000000" />
+	</font>
+	<font name="spec_summary_italic">
+		<ttf file="graphics/fonts/SW-Italic.ttf" name="SW Italic" size="12" />
+		<color value="#000000" />
+	</font>
+	<font name="spec_summary_bolditalic">
+		<ttf file="graphics/fonts/SW-BoldItalic.ttf" name="SW BoldItalic" size="12" />
+		<color value="#000000" />
+	</font>
+	<font name="spec_summary_title">
+		<ttf file="graphics/fonts/SW-Bold.ttf" name="SW Bold" size="14" />
+		<color value="#000000" />
+	</font>
+
+
 
 	<!-- Standard text fields -->
 

@@ -71,25 +71,41 @@
 			</label_column>
 			<string_columnh name="use_with" />
 
+			<line_column name="divider_modifiers1" />
+
       <label_column name="modifiers_label">
 				<static textres="item_attachment_modifiers_label" />
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="5" />
+					<right offset="-5" />
+				</anchored>
 			</label_column>
 			<string_columnh name="modifiers">
-			<anchored>
-				<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-				<left offset="135" />
-			</anchored>
-		</string_columnh>
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="5" />
+					<right offset="-5" />
+				</anchored>
+			</string_columnh>
 
 			<label_column name="modification_options_label">
 				<static textres="item_attachment_modification_options_label" />
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="5" />
+					<right offset="-5" />
+				</anchored>
 			</label_column>
 			<ft_columnh name="modification_options">
 				<anchored>
 					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="135" />
+					<left offset="5" />
+					<right offset="-5" />
 				</anchored>
 			</ft_columnh>
+
+			<line_column name="divider_modifiers2" />
 
       <label_column name="cost_label">
 				<static textres="item_label_cost" />

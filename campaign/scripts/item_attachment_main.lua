@@ -31,12 +31,14 @@ function update()
 	local nodeRecord = getDatabaseNode();
 	local bReadOnly = WindowManager.getReadOnlyState(nodeRecord);
 	local bID = LibraryData.getIDState("item_attachment", nodeRecord);
-  updateControl("nonid_name", bReadOnly, bID);
-  updateControl("nonidentified", bReadOnly, bID);
+	local bSectionNonID = false;
+	local bSectionModifiers = false;
+  if updateControl("nonid_name", bReadOnly, bID) then bSectionNonID = true; end
+  if updateControl("nonidentified", bReadOnly, bID) then bSectionNonID = true; end
   updateControl("equipment_type", bReadOnly, bID);
   updateControl("use_with", bReadOnly, bID);
-  updateControl("modifiers", bReadOnly, bID);
-	updateControl("modification_options", bReadOnly, bID);
+  if updateControl("modifiers", bReadOnly, bID) then bSectionModifiers = true; end
+	if updateControl("modification_options", bReadOnly, bID) then bSectionModifiers = true; end
   updateControl("hardpoints_required", bReadOnly, bID);
   updateControl("cost", bReadOnly, bID);
   updateControl("encumbrance", bReadOnly, bID);
@@ -49,4 +51,7 @@ function update()
 		updateControl("setting", bReadOnly, bID);
 	end
 	updateControl("source", bReadOnly, bID);
+	divider.setVisible(bSectionNonID);
+	divider_modifiers1.setVisible(bSectionModifiers);
+	divider_modifiers2.setVisible(bSectionModifiers);
 end
