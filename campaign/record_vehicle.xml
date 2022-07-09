@@ -275,6 +275,18 @@
 				</anchored>
 			</string_columnh>
 
+			<label_column name="model_label">
+				<static textres="vehicle_label_model" />
+			</label_column>
+			<string_columnh name="model">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+
+
 			<label_column name="manufacturer_label">
 				<static textres="vehicle_label_manufacturer" />
 			</label_column>
@@ -826,6 +838,16 @@
 				<static textres="vehicle_label_type" />
 			</label_column>
 			<string_columnh name="type">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+			</string_columnh>
+
+			<label_column name="model_label">
+				<static textres="vehicle_label_model" />
+			</label_column>
+			<string_columnh name="model">
 				<anchored>
 					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
 					<left offset="135" />

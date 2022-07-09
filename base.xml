@@ -8,7 +8,7 @@
 <root version="3.0" release="4.1" logo="logo.png">
 
 
-	<announcement text="Star Wars RPG (version 2022-06-20)\nA community ruleset for FG Classic and FG Unity\nDeveloped by John Ibarzabal (a.k.a. Mestre dos Magos), and Sevrick.\r\rStar Wars RPG (c) by Fantasy Flight Games. All rights reserved.\r\rThis ruleset is a community project developed for no monetary gain and with the understanding that game mechanics are not protected by US Copyright laws.\rAs such, no literary work (which is covered by US Copyright) has been included in this ruleset."  font="emotefont" icon="rulesetlogo_SWRPG" />
+	<announcement text="Star Wars RPG (version 2022-7-9)\nA community ruleset for FG Classic and FG Unity\nDeveloped by John Ibarzabal (a.k.a. Mestre dos Magos), and Sevrick.\r\rStar Wars RPG (c) by Fantasy Flight Games. All rights reserved.\r\rThis ruleset is a community project developed for no monetary gain and with the understanding that game mechanics are not protected by US Copyright laws.\rAs such, no literary work (which is covered by US Copyright) has been included in this ruleset."  font="emotefont" icon="rulesetlogo_SWRPG" />
 
 
 
@@ -55,6 +55,7 @@
 	<includefile source="campaign/record_char_skills_sw.xml" />
 	<includefile source="campaign/record_char_vehicle.xml" />
 	<includefile source="campaign/record_npc_main_sw.xml" />
+	<includefile source="campaign/record_npc_actions_sw.xml" />
 	<includefile source="campaign/record_npc_skills_sw.xml" />
 	<includefile source="campaign/template_char_sw.xml" />
 	<includefile source="campaign/record_vehicle.xml" />

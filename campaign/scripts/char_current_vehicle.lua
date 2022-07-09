@@ -19,8 +19,8 @@ function onClose()
 end
 
 function onListsUpdated()
-	onClose();
-	if getDatabaseNode() then
+	--onClose();
+	if getDatabaseNode() and current_vehicle_node then
 		local temp_node = getDatabaseNode().createChild("temp_vehicle");
 		local temp_w_node = temp_node.createChild("weapons");
 		local temp_a_node = temp_node.createChild("attachments");
@@ -49,19 +49,22 @@ function onListsUpdated()
 			DBManagerGenesys.copyNode(criticalsnode, temp_c_node);
 		end
 	end
-	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildAdded", onListsUpdated);
-	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildDeleted", onListsUpdated);
-	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildUpdate", onListsUpdated);
+--	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildAdded", onListsUpdated);
+--	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildDeleted", onListsUpdated);
+--	DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildUpdate", onListsUpdated);
 end
 
 function onLinkChanged()
-	onClose(); -- If there are handlers from a previous vehicle, remove...
+	--onClose(); -- If there are handlers from a previous vehicle, remove...
 	node = getDatabaseNode();
 	current_vehicle, current_vehicle_node = DBManagerGenesys.ActorVehicle(node);
 
 	if current_vehicle_node  and current_vehicle ~="" then
 		parentcontrol.window.contents.setVisible(true);
 		linkPCFields(current_vehicle_node);
+		DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildAdded", onListsUpdated);
+		DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildDeleted", onListsUpdated);
+		DB.addHandler(DB.getPath(current_vehicle_node) .. ".*", "onChildUpdate", onListsUpdated);
 		onListsUpdated();
 	else
 		parentcontrol.window.contents.setVisible(false);
@@ -125,6 +128,7 @@ function linkPCFields(nodeVehicle)
 	owner.setLink(current_vehicle_owner_node.createChild("name","string"));
 	name.setLink(nodeVehicle.createChild("name","string"));
 	type.setLink(nodeVehicle.createChild("type","string"));
+	model.setLink(nodeVehicle.createChild("model","string"));
 
 
 	manufacturer.setLink(nodeVehicle.createChild("manufacturer","string"));

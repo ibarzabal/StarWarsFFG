@@ -1,3 +1,14 @@
+function getRecordSource(vNode)
+	local v = StringManager.trim(DB.getValue(vNode, "source", ""));
+	local sType = v:match("^[^(]+");
+	if sType then
+		v = StringManager.trim(sType);
+	end
+	v = StringManager.capitalize(v);
+	return v;
+end
+
+
 aRecordOverrides = {
 	-- New record types
 	["talent"] = {
@@ -10,7 +21,7 @@ aRecordOverrides = {
 		aCustomFilters = {
 			["Activation"] = { sField = "activation" },
 			["Ranked"] = { sField = "ranked" },
-			["Source"] = { sField = "source" }
+			["Source"] = { sField = "source", fGetValue = getRecordSource },
 		},
 	},
 };

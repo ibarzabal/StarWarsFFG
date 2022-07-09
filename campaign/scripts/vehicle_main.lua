@@ -33,6 +33,7 @@ function update()
 	local bReadOnly = WindowManager.getReadOnlyState(nodeRecord);
 	local bID = true; --LibraryData.getIDState("item_attachment", nodeRecord);
 	updateControl("type", bReadOnly, bID);
+	updateControl("model", bReadOnly, bID);
 	updateControl("manufacturer", bReadOnly, bID);
 	updateControl("maximum_altitude", bReadOnly, bID);
 	updateControl("hyperdrive", bReadOnly, bID);

@@ -278,6 +278,10 @@
 				<static textres="vehicle_label_owner" />
 			</label_column>
 			<string_columnh_linked name="owner" source = ".temp_vehicle.owner">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
 				<nolinkwidget />
 				<readonly />
 			</string_columnh_linked>
@@ -286,6 +290,10 @@
 				<static textres="vehicle_label_name" />
 			</label_column>
 			<string_columnh_linked name="name" source = ".temp_vehicle.name">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
 				<nolinkwidget />
 				<readonly />
 			</string_columnh_linked>
@@ -294,6 +302,18 @@
 				<static textres="vehicle_label_type" />
 			</label_column>
 			<string_columnh_linked name="type" source = ".temp_vehicle.type">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
+				<nolinkwidget />
+				<readonly />
+			</string_columnh_linked>
+
+			<label_column name="model_label">
+				<static textres="vehicle_label_model" />
+			</label_column>
+			<string_columnh_linked name="model" source = ".temp_vehicle.model">
 				<anchored>
 					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
 					<left offset="135" />
@@ -437,6 +457,10 @@
 				<static textres="vehicle_label_consumables" />
 			</label_column>
 			<string_columnh_linked name="consumables" source = ".temp_vehicle.consumables" >
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
 				<nolinkwidget />
 				<readonly />
 			</string_columnh_linked>
@@ -446,6 +470,10 @@
 				<static textres="item_label_hard_points" />
 			</label_column>
 			<number_columnh_linked name="hard_points" source = ".temp_vehicle.hard_points">
+				<anchored>
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+					<left offset="135" />
+				</anchored>
 				<nolinkwidget />
 				<readonly />
 			</number_columnh_linked>
@@ -458,7 +486,7 @@
 				<script file="common/scripts/vehicle_control_skilldicepool.lua" />
 				<anchored to="control_skill_label" width="20" height="20">
 					<top />
-					<left anchor="right" relation="relative" offset="5" />
+					<left anchor="right" relation="relative" offset="60" />
 				</anchored>
 			</skilldicepool>
 
@@ -466,7 +494,7 @@
 			<string_columnh_linked name="control_skill" source = ".temp_vehicle.control_skill" >
 				<anchored mergerule="replace">
 					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7"/>
-					<left offset="97" />
+					<left offset="160" />
 					<right offset="-200" />
 				</anchored>
 				<nolinkwidget />

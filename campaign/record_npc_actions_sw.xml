@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+
+	<windowclass name="npc_actions" merge="join">
+    <sheetdata>
+      <frame_statblock1 name="main_statblock1">
+				<bounds>0,10,480,77</bounds>
+      </frame_statblock1>
+      <!-- BRAWN -->
+      <sheetcharacteristicvalue name="main_statblock1_brawn_current" source="brawn.current">
+        <anchored to="main_statblock1" offset="20,17"/>
+      </sheetcharacteristicvalue>
+      <!-- AGILITY-->
+      <sheetcharacteristicvalue name="main_statblock1_agility_current" source="agility.current">
+        <anchored>
+          <to>main_statblock1</to>
+          <offset>102,17</offset>
+        </anchored>
+      </sheetcharacteristicvalue>
+      <!-- INTELLECT-->
+      <sheetcharacteristicvalue name="main_statblock1_intellect_current" source="intellect.current">
+        <anchored to="main_statblock1" offset="185,17" />
+      </sheetcharacteristicvalue>
+      <!-- CUNNING-->
+      <sheetcharacteristicvalue name="main_statblock1_cunning_current" source="cunning.current">
+        <anchored to="main_statblock1" offset="264,17" />
+      </sheetcharacteristicvalue>
+      <!-- WILLPOWER-->
+      <sheetcharacteristicvalue name="main_statblock1_willpower_current" source="willpower.current">
+        <anchored to="main_statblock1" offset="345,17" />
+      </sheetcharacteristicvalue>
+      <!-- PRESENCE-->
+      <sheetcharacteristicvalue name="main_statblock1_presence_current" source="presence.current">
+        <anchored to="main_statblock1" offset="427,17" />
+      </sheetcharacteristicvalue>
+		</sheetdata>
+  </windowclass>
+</root>
