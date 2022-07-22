@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  Please see the license.html file included with this distribution for
+  attribution and copyright information.
+-->
+
+<root>
+	<windowclass name="planet">
+		<frame>recordsheet</frame>
+		<placement>
+			<size width="400" height="400" />
+		</placement>
+		<sharable />
+		<sizelimits>
+			<minimum width="350" height="350" />
+			<dynamic />
+		</sizelimits>
+		<minimize>minimized_reference</minimize>
+		<tooltip field="name" />
+		<nodelete />
+		<playercontrol />
+		<sharable />
+		<script file="campaign/scripts/planet.lua" />
+		<sheetdata>
+			<sub_record_header name="header">
+				<class>ref_planet_header</class>
+			</sub_record_header>
+
+			<frame_record_content_tabbed name="contentframe" />
+
+			<subwindow_record name="main">
+				<class>planet_main</class>
+				<activate />
+			</subwindow_record>
+			<scrollbar_record>
+				<target>main</target>
+			</scrollbar_record>
+
+			<subwindow_record name="notes">
+				<class>planet_notes</class>
+				<activate />
+			</subwindow_record>
+			<scrollbar_record>
+				<target>notes</target>
+			</scrollbar_record>
+
+
+			<tabs_recordsheet name="tabs">
+				<tab>
+					<icon>tab_main</icon>
+					<subwindow>main</subwindow>
+				</tab>
+				<tab>
+					<icon>tab_notes</icon>
+					<subwindow>notes</subwindow>
+				</tab>
+			</tabs_recordsheet>
+
+
+
+			<resize_recordsheet />
+			<close_recordsheet />
+		</sheetdata>
+	</windowclass>
+
+	<windowclass name="ref_planet_header">
+		<margins control="0,0,0,2" />
+		<script>
+			function onInit()
+				update();
+			end
+			function update()
+				local bReadOnly = WindowManager.getReadOnlyState(getDatabaseNode());
+				name.setReadOnly(bReadOnly);
+			end
+		</script>
+		<sheetdata>
+			<link_record_header>
+				<class>referenceplanet</class>
+			</link_record_header>
+
+			<anchor_record_header_right />
+			<icon_record_locked />
+			<button_record_locked />
+
+			<string_record_name name="name">
+				<empty textres="library_recordtype_empty_planet" />
+			</string_record_name>
+			<label_recordtype name="recordtype">
+				<static textres="record_label_planet" />
+			</label_recordtype>
+		</sheetdata>
+	</windowclass>
+
+	<windowclass name="planet_main">
+		<margins control="0,0,0,2" />
+ 		<script file="campaign/scripts/planet_main.lua" />
+		<sheetdata>
+			<anchor_column name="columnanchor" />
+
+
+			<header_column name="astronavigation_data_header">
+				<static textres="astronavigation_data_header"/>
+				<center />
+			</header_column>
+			<label_column name="system_label">
+				<static textres="label_system" />
+			</label_column>
+			<string_columnh name="system" />
+			<label_column name="sector_label">
+				<static textres="label_sector" />
+			</label_column>
+			<string_columnh name="sector" />
+			<label_column name="region_label">
+				<static textres="label_region" />
+			</label_column>
+			<string_columnh name="region" />
+
+			<header_column name="orbital_metrics_header">
+				<static textres="orbital_metrics_header"/>
+				<center />
+			</header_column>
+			<label_column name="year_label">
+				<static textres="label_year" />
+			</label_column>
+			<number_columnh name="year" />
+			<label_column name="day_label">
+				<static textres="label_day" />
+			</label_column>
+			<number_columnh name="day" />
+
+			<header_column name="other_header">
+				<static textres="other_header"/>
+				<center />
+			</header_column>
+
+			<label_column name="government_label">
+				<static textres="label_government" />
+			</label_column>
+			<string_columnh name="government" />
+			<label_column name="population_label">
+				<static textres="label_population" />
+			</label_column>
+			<string_columnh name="population" />
+
+			<label_column name="languages_label">
+				<static textres="label_languages" />
+			</label_column>
+			<string_columnh name="languages" />
+
+			<label_column name="terrain_label">
+				<static textres="label_terrain" />
+			</label_column>
+			<string_columnh name="terrain" />
+
+			<label_column name="major_cities_label">
+				<static textres="label_major_cities" />
+			</label_column>
+			<string_columnh name="major_cities" />
+
+			<label_column name="areas_of_interest_label">
+				<static textres="label_areas_of_interest" />
+			</label_column>
+			<string_columnh name="areas_of_interest" />
+
+			<label_column name="major_exports_label">
+				<static textres="label_major_exports" />
+			</label_column>
+			<string_columnh name="major_exports" />
+
+			<label_column name="major_imports_label">
+				<static textres="label_major_imports" />
+			</label_column>
+			<string_columnh name="major_imports" />
+
+			<label_column name="trade_routes_label">
+				<static textres="label_trade_routes" />
+			</label_column>
+			<string_columnh name="trade_routes" />
+
+			<label_column name="special_conditions_label">
+				<static textres="label_special_conditions" />
+			</label_column>
+			<string_columnh name="special_conditions" />
+
+
+			<line_column name="divider_source" />
+			<label_column name="source_label">
+				<static textres="label_source" />
+			</label_column>
+			<string_columnh name="source" />
+		</sheetdata>
+	</windowclass>
+
+	<windowclass name="planet_notes">
+		<margins control="0,0,0,2" />
+ 		<script file="campaign/scripts/planet_notes.lua" />
+		<sheetdata>
+			<anchor_column name="columnanchor" />
+			<ft_columnh name="description" />
+		</sheetdata>
+	</windowclass>
+
+
+</root>

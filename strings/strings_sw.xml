@@ -32,6 +32,8 @@
   <string name="species_archetype">Species</string>
 	<string name="library_recordtype_label_species_archetype">Species</string>
 	<string name="library_recordtype_empty_species_archetype">&#171; New Species &#187;</string>
+	<string name="library_recordtype_empty_planet">&#171; New Planet &#187;</string>
+	<string name="record_label_planet">Planet</string>
   <string name="library_recordtype_label_item_attachment">Attachments</string>
 	<string name="record_label_species_archetype">Species</string>
 	<string name="record_label_racialtrait">Species Trait</string>
@@ -72,6 +74,30 @@
 	<string name="vehicle_label_starfighter_complement">Starfighter Comp.</string>
 	<string name="vehicle_label_vehicle_complement">Vehicle Comp.</string>
 	<!-- <string name="vehicle_label_additional_rules">Additional Rules</string> -->
+
+	<!-- Planet -->
+  <string name="library_recordtype_label_planet">Planets</string>
+	<string name="astronavigation_data_header">Astronavigation Data</string>
+	<string name="label_system">System</string>
+	<string name="label_sector">Sector</string>
+	<string name="label_region">Region</string>
+	<string name="orbital_metrics_header">Orbital Metrics</string>
+	<string name="label_year">Days per year</string>
+	<string name="label_day">Hours per day</string>
+
+	<string name="other_header">Other</string>
+	<string name="label_government">Government</string>
+	<string name="label_population">Population</string>
+	<string name="label_languages">Languages</string>
+	<string name="label_terrain">Terrain</string>
+	<string name="label_major_cities">Major Cities</string>
+	<string name="label_areas_of_interest">Areas of int.</string>
+	<string name="label_major_exports">Major Exports</string>
+	<string name="label_major_imports">Major Imports</string>
+	<string name="label_trade_routes">Trade Routes</string>
+	<string name="label_special_conditions">Special Cond.</string>
+
+
 
 				<!-- These are new fields in SW vehicles: -->
 	<string name="vehicle_label_manufacturer">Manufacturer</string>

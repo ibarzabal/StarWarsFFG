@@ -1,11 +1,140 @@
 function getRecordSource(vNode)
-	local v = StringManager.trim(DB.getValue(vNode, "source", ""));
-	local sType = v:match("^[^(]+");
-	if sType then
-		v = StringManager.trim(sType);
+	local aStrings = {};
+	local sType;
+	local vrNode = DB.getValue(vNode, "source", "");
+--	local vrNode = StringManager.multireplace(DB.getValue(vNode, "source", ""),", and ", ",");
+--	local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+		sType = v:match("^[^(]+");
+		if sType then
+			v = StringManager.trim(sType);
+		end
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
 	end
-	v = StringManager.capitalize(v);
-	return v;
+	return aStrings;
+end
+
+function getRecordSpecial(vNode)
+	local aStrings = {};
+	local sType;
+	--local vrNode = StringManager.multireplace(DB.getValue(vNode, "special", ""),", and ", ",");
+	--local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	local vrNode = DB.getValue(vNode, "special", "");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+
+		sType = v:match("^[^?%+%d]+");
+		if sType then
+			v = StringManager.trim(sType);
+		end
+
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
+	end
+	return aStrings;
+end
+
+
+---------------------------------------------------------------------------------------------------------------------
+-- Planet Database filters
+function getRecordLanguages(vNode)
+	local aStrings = {};
+	local sType;
+	--local vrNode = StringManager.multireplace(DB.getValue(vNode, "languages", ""),", and ", ",");
+	--local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	local vrNode = DB.getValue(vNode, "languages", "");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
+	end
+	return aStrings;
+end
+
+function getRecordTerrain(vNode)
+	local aStrings = {};
+	local sType;
+	--local vrNode = StringManager.multireplace(DB.getValue(vNode, "terrain", ""),", and ", ",");
+	--local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	local vrNode = DB.getValue(vNode, "terrain", "");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
+	end
+	return aStrings;
+end
+
+function getRecordMajorCities(vNode)
+	local aStrings = {};
+	local sType;
+	--local vrNode = StringManager.multireplace(DB.getValue(vNode, "major_cities", ""),", and ", ",");
+	--local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	local vrNode = DB.getValue(vNode, "major_cities", "");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
+	end
+	return aStrings;
+end
+
+function getRecordAreasOfInterest(vNode)
+	local aStrings = {};
+	local sType;
+	--local vrNode = StringManager.multireplace(DB.getValue(vNode, "areas_of_interest", ""),", and ", ",");
+	--local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	local vrNode = DB.getValue(vNode, "areas_of_interest", "");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
+	end
+	return aStrings;
+end
+
+function getRecordMajorExports(vNode)
+	local aStrings = {};
+	local sType;
+	--local vrNode = StringManager.multireplace(DB.getValue(vNode, "major_exports", ""),", and ", ",");
+	--local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	local vrNode = DB.getValue(vNode, "major_exports", "");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
+	end
+	return aStrings;
+end
+
+function getRecordMajorImports(vNode)
+	local aStrings = {};
+	local sType;
+	--local vrNode = StringManager.multireplace(DB.getValue(vNode, "major_imports", ""),", and ", ",");
+	--local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	local vrNode = DB.getValue(vNode, "major_imports", "");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
+	end
+	return aStrings;
+end
+
+function getRecordTradeRoutes(vNode)
+	local aStrings = {};
+	local sType;
+	--local vrNode = StringManager.multireplace(DB.getValue(vNode, "trade_routes", ""),", and ", ",");
+	--local vrNode = StringManager.multireplace(vrNode," and ", ",");
+	local vrNode = DB.getValue(vNode, "trade_routes", "");
+	for _,v in pairs(StringManager.split(vrNode, ",", true)) do
+		v = StringManager.trim(v);
+		v = StringManager.capitalize(v);
+		table.insert(aStrings, v);
+	end
+	return aStrings;
 end
 
 
@@ -16,7 +145,6 @@ aRecordOverrides = {
 		aDisplayIcon = { "button_species_archetypes", "button_species_archetypes_down" },
 		sRecordDisplayClass = "referencespecies_archetype",
 		sSidebarCategory = "create",
-		sIcon = "sidebar_icon_race",
 		aCustomFilters = {
 			["Source"] = { sField = "source", fGetValue = getRecordSource },
 		},
@@ -50,6 +178,7 @@ aRecordOverrides = {
 			["Category"] = { sField = "npc_category", sType = "string"},
 			["Type"] = { sField = "type", sType = "string"},
 			["Source"] = { sField = "source", fGetValue = getRecordSource },
+			["Species"] = { sField = "species_archetype", sType = "string"},
 		},
 	},
 	["item"] = {
@@ -67,6 +196,7 @@ aRecordOverrides = {
 			["Skill"] = { sField = "skill" },
 			["Type"] = { sField = "type" },
 			["Subtype"] = { sField = "subtype" },
+			["Special"] = { sField = "special", fGetValue = getRecordSpecial },
 		},
 	},
 	["talent"] = {
@@ -131,6 +261,27 @@ aRecordOverrides = {
 			["Source"] = { sField = "source", fGetValue = getRecordSource },
 		},
 	},
+-- Star Wars Only
+["planet"] = {
+	bExport = true,
+	aDataMap = { "planet", "reference.planets" },
+	--aDisplayIcon = { "button_careers", "button_careers_down" },
+	sRecordDisplayClass = "planet",
+	aCustomFilters = {
+		["System"] = { sField = "system", sType = "string"},
+		["Sector"] = { sField = "sector", sType = "string"},
+		["Region"] = { sField = "region", sType = "string"},
+		["Languages"] = { sField = "languages", fGetValue = getRecordLanguages },
+		["Terrain"] = { sField = "terrain", fGetValue = getRecordTerrain },
+		["Major Cities"] = { sField = "major_cities", fGetValue = getRecordMajorCities },
+		["Areas of Interest"] = { sField = "areas_of_interest", fGetValue = getRecordAreasOfInterest },
+		["Major exports"] = { sField = "major_exports", fGetValue = getRecordMajorExports },
+		["Major Imports"] = { sField = "major_imports", fGetValue = getRecordMajorImports },
+		["Trade Routes"] = { sField = "trade_routes", fGetValue = getRecordTradeRoutes },
+		["Source"] = { sField = "source", fGetValue = getRecordSource },
+	},
+},
+
 };
 
 function onInit()
